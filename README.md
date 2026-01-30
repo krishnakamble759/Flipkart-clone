@@ -37,12 +37,12 @@ If you see an error saying `git` is not recognized:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/flipkart-clone.git
+   git clone https://github.com/krishnakamble759/flipkart-website.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd flipkart-clone
+   cd flipkart-website
    ```
 
 3. Install dependencies:
@@ -66,7 +66,7 @@ If you see an error saying `git` is not recognized:
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YOUR_USERNAME/flipkart-clone/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/krishnakamble759/flipkart-website/issues).
 
 ## 📄 License
 
@@ -86,3 +86,4 @@ To deploy to GitHub Pages, you can use the static build in the `dist` folder. It
 
 ---
 Built with ❤️ by [Your Name]
+
