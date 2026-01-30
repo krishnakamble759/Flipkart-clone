@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geared Cycles - Results</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+        
+    <!-- Mobile Sidebar Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-drawer">
+        <div class="menu-header">
+            <div class="user-info">
+                <i class="bi bi-person-fill"></i>
+                <span>Login & Signup</span>
+            </div>
+            <img src="/logo_lite-8d7a06.png" class="menu-logo-icon" alt="Flipkart">
+        </div>
+        <ul class="menu-list">
+            <li><i class="bi bi-lightning-charge-fill"></i> SuperCoin Zone</li>
+            <li><i class="bi bi-star-fill"></i> Flipkart Plus Zone</li>
+            <li class="separator"></li>
+            <li><i class="bi bi-grid-fill"></i> All Categories</li>
+            <li><i class="bi bi-grid-3x3-gap-fill"></i> More on Flipkart</li>
+            <li class="separator"></li>
+            <li><i class="bi bi-translate"></i> Choose Language</li>
+            <li class="separator"></li>
+            <li><i class="bi bi-percent"></i> Offer Zone</li>
+            <li><i class="bi bi-briefcase-fill"></i> Sell on Flipkart</li>
+            <li class="separator"></li>
+            <li><i class="bi bi-box-seam-fill"></i> My Orders</li>
+            <li><i class="bi bi-ticket-perforated-fill"></i> Coupons</li>
+            <li><i class="bi bi-cart-fill"></i> My Cart</li>
+            <li><i class="bi bi-heart-fill"></i> My Wishlist</li>
+            <li><i class="bi bi-person-fill"></i> My Account</li>
+            <li><i class="bi bi-bell-fill"></i> My Notifications</li>
+            <li class="separator"></li>
+            <li>Notification Preferences</li>
+            <li>Help Centre</li>
+            <li>Legal</li>
+        </ul>
+    </div>
+
+
+
+            <!-- Top Header -->
+    <header class="header">
+        <!-- Mobile Header (Visible only on < 576px) -->
+        <div class="mobile-header">
+            <div class="mobile-top-row">
+                <div class="left-section">
+                    <i class="bi bi-list hamburger-icon"></i>
+                    <a href="/" class="mobile-logo">
+                        <img src="/header logo.png"
+                            alt="Flipkart" class="fk-logo-mobile" />
+                        <span class="explore-plus-mobile">Explore <span class="plus-text">Plus</span><img
+                                src="/plus.png"
+                                alt="Plus" class="plus-icon-mobile" /></span>
+                    </a>
+                </div>
+
+                <!-- Tablet Search (Visible 769px - 1024px) -->
+                <div class="tablet-search-container">
+                    <div class="search-box-tablet">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search for Products, Brands and More">
+                    </div>
+                </div>
+
+                <div class="right-section">
+                    <div class="mobile-icon-item"><i class="bi bi-phone"></i></div>
+                    <div class="mobile-icon-item login">
+                        <i class="bi bi-person-circle"></i> <span>Login</span>
+                    </div>
+                    <a href="cart.html" class="mobile-icon-item cart-link">
+                        <i class="bi bi-cart"></i>
+                        <span class="cart-badge hide">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mobile-location-row">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div class="location-text">
+                    <span class="status">Location not set</span>
+                    <span class="action">Select delivery location <i class="bi bi-chevron-right"></i></span>
+                </div>
+            </div>
+
+            <div class="mobile-search-row">
+                <div class="search-box-mobile">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search for Products">
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Header -->
+        <div class="header-container">
+
+            <!-- Logo Section -->
+            <div class="logo-container">
+                <a href="/" class="logo-link">
+                    <img src="/header logo.png"
+                        alt="Flipkart" class="fk-logo" />
+                    <div class="explore-plus">
+                        <span class="explore-text">Explore <span class="plus-text">Plus</span></span>
+                        <img src="/plus.png"
+                            alt="Plus" class="plus-icon" />
+                    </div>
+                </a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for products, brands and more" name="q" autocomplete="off" />
+                    <button type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Nap -->
+            <div class="nav-container">
+                <div class="nav-item">
+                    <button class="login-btn">
+                        <i class="bi bi-person tab-icon"></i>
+                        <span>Login</span>
+                        <i class="bi bi-chevron-down tab-icon"></i>
+                    </button>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-shop tab-icon"></i>
+                        <span class="nav-text">Become a Seller</span>
+                    </a>
+                </div>
+                                <div class="nav-item dropdown">
+                    <span class="nav-link">
+                        <i class="bi bi-three-dots-vertical tab-icon"></i>
+                        <span class="nav-text">More</span>
+                        <i class="bi bi-chevron-down down-arrow nav-text"></i>
+                    </span>
+                    <div class="dropdown-content">
+                        <a href="#">
+                            <i class="bi bi-bell-fill"></i>
+                            <span>Notification Preferences</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-question-square-fill"></i>
+                            <span>24x7 Customer Care</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span>Advertise</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-download"></i>
+                            <span>Download App</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="cart.html" class="nav-link cart-link">
+                        <i class="bi bi-cart-fill cart-icon"></i>
+                        <span class="nav-text">Cart</span>
+                        <span class="cart-badge hide">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Product List Page Content -->
+    <main class="product-list-page">
+        <div class="breadcrumb">
+            <span>Home</span> <i class="bi bi-chevron-right"></i>
+            <span>Geared Cycles</span>
+        </div>
+
+        <div class="list-container">
+            <h1 class="results-count">Geared Cycles (Showing 1 – 11 products of 11 products)</h1>
+
+            <div class="sort-options">
+                <span class="sort-label">Sort By</span>
+                <span class="sort-item active">Popularity</span>
+                <span class="sort-item">Price -- Low to High</span>
+                <span class="sort-item">Price -- High to Low</span>
+                <span class="sort-item">Newest First</span>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-urban-terrain-galaxy-max-26t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/26t 1.webp" alt="Urban Terrain Galaxy Max 26T">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">Urban Terrain Galaxy Max 26T Geared High Performance MT...</h2>
+                        <div class="rating-row">
+                            <span class="rating-badge">3.7 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(1,789)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹6,189</span>
+                            <span class="old-price">₹14,999</span>
+                            <span class="discount">58% off</span>
+                        </div>
+                        <div class="bank-offer">Bank Offer</div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-vesco-drift-24t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/24t.webp" alt="VESCO Drift 24T">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">VESCO Drift 24T Kids 7 Gear Cycle for boys & girls age ...</h2>
+                        <div class="rating-row">
+                            <span class="rating-badge">3.9 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(18,641)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹5,668</span>
+                            <span class="old-price">₹14,999</span>
+                            <span class="discount">62% off</span>
+                        </div>
+                        <div class="bank-offer">Bank Offer</div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-urban-terrain-galaxy-26t-max'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/26t 2.webp" alt="Urban Terrain Galaxy 26T Max">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">Urban Terrain Galaxy 26T Max Geared High Performance MT...</h2>
+                        <div class="rating-row">
+                            <span class="rating-badge">3.7 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(1,781)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹4,999</span>
+                            <span class="old-price">₹14,999</span>
+                            <span class="discount">66% off</span>
+                        </div>
+                        <div class="bank-offer">Bank Offer</div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-capent-infinity-26t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/capment 1.webp" alt="CAPENT INFINITY 21 Speed">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">CAPENT INFINITY 21 Speed Geared Mountain/MTB Cycle with...</h2>
+                        <div class="rating-row">
+                            <span class="badge-rating rating-badge">3.9 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(76)</span>
+                            <img src="/assured.png"
+                                class="assured-img" alt="Assured">
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹7,978</span>
+                            <span class="old-price">₹14,999</span>
+                            <span class="discount">46% off</span>
+                        </div>
+                        <div class="saver-deal">Top Discount of the Sale</div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-east-coast-carnage-24t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/Ec 24t 1.webp" alt="EAST COAST CARNAGE 24T">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">EAST COAST CARNAGE 24T Cycle with 7 Speed Gear ( 9years...</h2>
+                        <div class="rating-row">
+                            <span class="badge-rating rating-badge">4 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(432)</span>
+                            <img src="/assured.png"
+                                class="assured-img" alt="Assured">
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹5,772</span>
+                            <span class="old-price">₹18,599</span>
+                            <span class="discount">68% off</span>
+                        </div>
+                        <div class="saver-deal">Top Discount of the Sale</div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-urban-terrain-galaxy-27t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/urban 27t 1.webp" alt="Urban Terrain Galaxy 27.5T Max">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">Urban Terrain Galaxy 27.5T Max Geared High Performance ...</h2>
+                        <div class="rating-row">
+                            <span class="badge-rating rating-badge low-rating">3.4 <i
+                                    class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(554)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹7,099</span>
+                            <span class="old-price">₹16,299</span>
+                            <span class="discount">56% off</span>
+                        </div>
+                        <div class="bank-offer">Bank Offer</div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-leader-beast-24t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/leader 24t 1.webp" alt="LEADER Beast 24T Multispeed">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">LEADER Beast 24T Multispeed (7 Speed) Bike with Front S...</h2>
+                        <div class="rating-row">
+                            <span class="badge-rating rating-badge">3.8 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(1,240)</span>
+                            <img src="/assured.png"
+                                class="assured-img" alt="Assured">
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹6,109</span>
+                            <span class="old-price">₹18,999</span>
+                            <span class="discount">67% off</span>
+                        </div>
+                        <div class="saver-deal">Top Discount of the Sale</div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-urban-terrain-ut6000a29'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/urban 27t 1.webp" alt="Urban Terrain UT6000A29">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">Urban Terrain UT6000A29 Alloy 29T MTB Cycles Shimano Ge...</h2>
+                        <div class="rating-row">
+                            <span class="badge-rating rating-badge">4.1 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(9,775)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹12,499</span>
+                            <span class="old-price">₹52,999</span>
+                            <span class="discount">76% off</span>
+                        </div>
+                        <div class="saver-deal">Top Discount of the Sale</div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-vivid-valero-26t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/vivid 1.webp" alt="VIVID Valero 26T">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">VIVID Valero 26T IBC 7 Speed Cycle for Men with Front S...</h2>
+                        <div class="rating-row">
+                            <span class="badge-rating rating-badge">4.8 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(13)</span>
+                            <img src="/assured.png"
+                                class="assured-img" alt="Assured">
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹7,599</span>
+                            <span class="old-price">₹19,999</span>
+                            <span class="discount">62% off</span>
+                        </div>
+                        <div class="bank-offer">Bank Offer</div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-urban-terrain-galaxy-ultra-27t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/urban 27t 1.webp" alt="Urban Terrain Galaxy Ultra 27.5T">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">Urban Terrain Galaxy Ultra 27.5T MTB Geared Cycle with ...</h2>
+                        <div class="rating-row">
+                            <span class="badge-rating rating-badge">4.1 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(3,482)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹7,249</span>
+                            <span class="old-price">₹18,799</span>
+                            <span class="discount">61% off</span>
+                        </div>
+                        <div class="bank-offer">Bank Offer</div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-list-card"
+                    onclick="window.location.href='/product-detail.html?type=cycle-east-coast-multispeed-26t'">
+                    <i class="bi bi-heart-fill wishlist-icon"></i>
+                    <div class="img-container">
+                        <img src="/cycle/Ec 26t 1.webp" alt="EAST COAST MultiSpeed">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-name">EAST COAST MultiSpeed Bike with FS & DD Brake 26 T Moun...</h2>
+                        <div class="rating-row">
+                            <span class="badge-rating rating-badge">3.9 <i class="bi bi-star-fill"></i></span>
+                            <span class="rating-count">(1,442)</span>
+                            <img src="/assured.png"
+                                class="assured-img" alt="Assured">
+                        </div>
+                        <div class="price-row">
+                            <span class="curr-price">₹6,284</span>
+                            <span class="old-price">₹18,599</span>
+                            <span class="discount">66% off</span>
+                        </div>
+                        <div class="bank-offer">Bank Offer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="footer-wrapper">
+            <div class="footer-top">
+                <div class="footer-links-col">
+                    <div class="col-section">
+                        <h6 class="col-heading">ABOUT</h6>
+                        <a href="#">Contact Us</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Flipkart Stories</a>
+                        <a href="#">Press</a>
+                        <a href="#">Flipkart Wholesale</a>
+                        <a href="#">Corporate Information</a>
+                    </div>
+                    <div class="col-section">
+                        <h6 class="col-heading">GROUP COMPANIES</h6>
+                        <a href="#">Myntra</a>
+                        <a href="#">Cleartrip</a>
+                        <a href="#">Shopsy</a>
+                    </div>
+                    <div class="col-section">
+                        <h6 class="col-heading">HELP</h6>
+                        <a href="#">Payments</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Cancellation & Returns</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Report Infringement</a>
+                    </div>
+                    <div class="col-section">
+                        <h6 class="col-heading">CONSUMER POLICY</h6>
+                        <a href="#">Return Policy</a>
+                        <a href="#">Terms Of Use</a>
+                        <a href="#">Security</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Sitemap</a>
+                        <a href="#">Grievance Redressal</a>
+                        <a href="#">EPR Compliance</a>
+                    </div>
+                    <div class="col-section social">
+                        <h6 class="col-heading">Social:</h6>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-divider-vertical"></div>
+                <div class="footer-address-col">
+                    <div class="col-section address">
+                        <h6 class="col-heading">Mail Us:</h6>
+                        <p>
+                            Flipkart Internet Private Limited,<br>
+                            Buildings Alyssa, Begonia &<br>
+                            Clove Embassy Tech Village,<br>
+                            Outer Ring Road, Devarabeesanahalli Village,<br>
+                            Bengaluru, 560103,<br>
+                            Karnataka, India
+                        </p>
+                    </div>
+                    <div class="col-section address">
+                        <h6 class="col-heading">Registered Office Address:</h6>
+                        <p>
+                            Flipkart Internet Private Limited,<br>
+                            Buildings Alyssa, Begonia &<br>
+                            Clove Embassy Tech Village,<br>
+                            Outer Ring Road, Devarabeesanahalli Village,<br>
+                            Bengaluru, 560103,<br>
+                            Karnataka, India<br>
+                            CIN : U51109KA2012PTC066107<br>
+                            Telephone: <a href="tel:04445614700">044-45614700</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="bottom-links">
+                    <a href="#"><img src="/footer/seller.png" alt="Seller"> Become a Seller</a>
+                    <a href="#"><img src="/footer/star.png" alt="Advertise"> Advertise</a>
+                    <a href="#"><img src="/footer/gift.png" alt="Gift Cards"> Gift Cards</a>
+                    <a href="#"><img src="/footer/help.png" alt="Help Center"> Help Center</a>
+                </div>
+                <div class="copyright">
+                    <span>&copy; 2026 Krishna</span>
+                </div>
+                <div class="payment-methods">
+                    <img src="/payment-method.svg"
+                        alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+            <!-- Login Modal -->
+    <div class="login-modal-overlay">
+        <div class="login-modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div class="login-left">
+                <span class="left-title">Login</span>
+                <p class="left-desc">Get access to your Orders, Wishlist and Recommendations</p>
+                <div class="left-illustration">
+                    <img src="/canvas.png"
+                        alt="Login Illustration" class="login-img">
+                </div>
+            </div>
+            <div class="login-right">
+                <form class="login-form">
+                    <div class="form-floating-input">
+                        <input type="text" id="loginId" required autocomplete="off">
+                        <label for="loginId">Enter Email/Mobile Number</label>
+                    </div>
+
+                    <div class="legal-text-sm">
+                        By continuing, you agree to Flipkart's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+                    </div>
+
+                    <div class="form-floating-input">
+                        <input type="password" id="loginPassword" required>
+                        <label for="loginPassword">Enter Password</label>
+                        <a href="#" class="forgot-link">Forget?</a>
+                    </div>
+
+                    <button type="submit" class="login-submit-btn">Login</button>
+
+                    <div class="or-divider">OR</div>
+
+                    <button type="button" class="otp-btn">Request OTP</button>
+
+                    <div class="new-account-link">
+                        <a href="#">New to Flipkart? Create an account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Login Sheet (Separate from Desktop Modal) -->
+    <div class="mobile-login-sheet-overlay">
+        <div class="mobile-login-container">
+            <div class="sheet-header">
+                <i class="bi bi-x-lg close-sheet-btn"></i>
+                <div class="header-logo">
+                    <span class="brand-text">Flipkart</span>
+                    <img src="/plus.png"
+                        alt="Logo" class="header-logo-img">
+                </div>
+            </div>
+            <div class="sheet-body">
+                <h3 class="sheet-title">Log in to check your Account</h3>
+
+                <div class="mobile-input-container">
+                    <div class="input-label">Phone Number</div>
+                    <div class="input-row">
+                        <span class="country-code">+91 <i class="bi bi-caret-down-fill"></i></span>
+                        <input type="tel" class="phone-input">
+                    </div>
+                </div>
+
+                <div class="use-email-link">Use Email-ID</div>
+
+                <div class="legal-text">
+                    By continuing, you confirm that you are above 18 years of age, and you agree to the Flipkart's <a
+                        href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="sheet-footer">
+                <button class="continue-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/js/product-list.js"></script>
+</body>
+
+</html>

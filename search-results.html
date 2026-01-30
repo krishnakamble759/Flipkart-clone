@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results - Flipkart</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/src/scss/style.scss">
+</head>
+
+<body class="search-results-page">
+    <!-- Top Header -->
+    <header class="header search-results-header">
+        <div class="header-container">
+            <a href="/" class="logo-link">
+                <img src="/header logo.png"
+                    alt="Flipkart">
+            </a>
+
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for products, brands and more" id="header-search-input"
+                        autocomplete="off">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="no-results-container">
+            <img src="/search result.png"
+                alt="No Results" class="no-results-image">
+            <div class="no-results-text">Sorry, no results found!</div>
+            <div id="query-info" class="no-results-subtext">We couldn't find anything for "<span
+                    class="search-query-text" id="query-display"></span>"</div>
+            <div class="no-results-subtext">Try checking your spelling or use more general terms.</div>
+            <a href="/" class="go-home-btn">Go to Homepage</a>
+        </div>
+    </main>
+
+    <script type="module" src="/src/js/search-results.js"></script>
+</body>
+
+</html>

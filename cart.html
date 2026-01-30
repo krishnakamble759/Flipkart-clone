@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart | Flipkart</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/src/scss/style.scss">
+</head>
+
+<body class="cart-page">
+
+    <!-- Mobile Sidebar Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-drawer">
+        <div class="menu-header">
+            <div class="user-info">
+                <i class="bi bi-person-fill"></i>
+                <span>Login & Signup</span>
+            </div>
+            <img src="/logo_lite-8d7a06.png" class="menu-logo-icon" alt="Flipkart">
+        </div>
+        <ul class="menu-list">
+            <li><i class="bi bi-lightning-charge-fill"></i> SuperCoin Zone</li>
+            <li><i class="bi bi-star-fill"></i> Flipkart Plus Zone</li>
+            <li class="separator"></li>
+            <li><i class="bi bi-grid-fill"></i> All Categories</li>
+            <li><i class="bi bi-grid-3x3-gap-fill"></i> More on Flipkart</li>
+            <li class="separator"></li>
+            <li><i class="bi bi-translate"></i> Choose Language</li>
+            <li class="separator"></li>
+            <li><i class="bi bi-percent"></i> Offer Zone</li>
+            <li><i class="bi bi-briefcase-fill"></i> Sell on Flipkart</li>
+            <li class="separator"></li>
+            <li><i class="bi bi-box-seam-fill"></i> My Orders</li>
+            <li><i class="bi bi-ticket-perforated-fill"></i> Coupons</li>
+            <li><i class="bi bi-cart-fill"></i> My Cart</li>
+            <li><i class="bi bi-heart-fill"></i> My Wishlist</li>
+            <li><i class="bi bi-person-fill"></i> My Account</li>
+            <li><i class="bi bi-bell-fill"></i> My Notifications</li>
+            <li class="separator"></li>
+            <li>Notification Preferences</li>
+            <li>Help Centre</li>
+            <li>Legal</li>
+        </ul>
+    </div>
+
+    <!-- Top Header -->
+    <header class="header">
+        <!-- Mobile Header (Visible only on < 576px) -->
+        <div class="mobile-header">
+            <div class="mobile-top-row">
+                <div class="left-section">
+                    <i class="bi bi-list hamburger-icon"></i>
+                    <a href="/" class="mobile-logo">
+                        <img src="/header logo.png" alt="Flipkart" class="fk-logo-mobile" />
+                        <span class="explore-plus-mobile">Explore <span class="plus-text">Plus</span>
+                            <img src="/plus.png" alt="Plus" class="plus-icon-mobile" /></span>
+                    </a>
+                </div>
+
+                <!-- Tablet Search (Visible 769px - 1024px) -->
+                <div class="tablet-search-container">
+                    <div class="search-box-tablet">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search for Products, Brands and More">
+                    </div>
+                </div>
+
+                <div class="right-section">
+                    <div class="mobile-icon-item"><i class="bi bi-phone"></i></div>
+                    <div class="mobile-icon-item login">
+                        <i class="bi bi-person-circle"></i> <span>Login</span>
+                    </div>
+                    <a href="cart.html" class="mobile-icon-item cart-link">
+                        <i class="bi bi-cart"></i>
+                        <span class="cart-badge hide">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mobile-location-row">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div class="location-text">
+                    <span class="status">Location not set</span>
+                    <span class="action">Select delivery location <i class="bi bi-chevron-right"></i></span>
+                </div>
+            </div>
+
+            <div class="mobile-search-row">
+                <div class="search-box-mobile">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search for Products">
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Header -->
+        <div class="header-container">
+
+            <!-- Logo Section -->
+            <div class="logo-container">
+                <a href="/" class="logo-link">
+                    <img src="/header logo.png" alt="Flipkart" class="fk-logo" />
+                    <div class="explore-plus">
+                        <span class="explore-text">Explore <span class="plus-text">Plus</span></span>
+                        <img src="/plus.png" alt="Plus" class="plus-icon" />
+                    </div>
+                </a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for products, brands and more" name="q" autocomplete="off" />
+                    <button type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Nap -->
+            <div class="nav-container">
+                <div class="nav-item">
+                    <button class="login-btn">
+                        <i class="bi bi-person tab-icon"></i>
+                        <span>Login</span>
+                        <i class="bi bi-chevron-down tab-icon"></i>
+                    </button>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-shop tab-icon"></i>
+                        <span class="nav-text">Become a Seller</span>
+                    </a>
+                </div>
+                <div class="nav-item dropdown">
+                    <span class="nav-link">
+                        <i class="bi bi-three-dots-vertical tab-icon"></i>
+                        <span class="nav-text">More</span>
+                        <i class="bi bi-chevron-down down-arrow nav-text"></i>
+                    </span>
+                    <div class="dropdown-content">
+                        <a href="#">
+                            <i class="bi bi-bell-fill"></i>
+                            <span>Notification Preferences</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-question-square-fill"></i>
+                            <span>24x7 Customer Care</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span>Advertise</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-download"></i>
+                            <span>Download App</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="cart.html" class="nav-link cart-link">
+                        <i class="bi bi-cart-fill cart-icon"></i>
+                        <span class="nav-text">Cart</span>
+                        <span class="cart-badge hide">0</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="cart-page-content">
+        <div class="cart-container hide" id="cart-content">
+            <div class="cart-left">
+                <div class="address-header">
+                    <div class="from-text">From Saved Addresses</div>
+                    <div class="pincode-btn">Enter Delivery Pincode</div>
+                </div>
+
+                <div class="cart-items-list" id="cart-items-container">
+                    <!-- Items will be injected here -->
+                </div>
+
+                <div class="place-order-footer">
+                    <div class="footer-price-info">
+                        <div class="footer-old-price" id="footer-old-price">₹0</div>
+                        <div class="footer-final-amount">
+                            <span class="footer-price-val" id="footer-price-val">₹0</span>
+                            <i class="bi bi-info-circle footer-info-icon"></i>
+                        </div>
+                    </div>
+                    <button class="place-order-btn">Place Order</button>
+                </div>
+            </div>
+
+            <div class="cart-right">
+                <div class="price-details-card">
+                    <div class="card-header">Price Details</div>
+                    <div class="card-body">
+                        <div class="price-row">
+                            <span class="price-label" id="price-items-label">Price (0 items)</span>
+                            <span class="price-val" id="total-mrp">₹0</span>
+                        </div>
+                        <div class="price-row discount-row">
+                            <span class="price-label">Discount</span>
+                            <span class="price-val" id="total-discount">- ₹0</span>
+                        </div>
+                        <div class="price-row delivery-row">
+                            <span class="price-label">Delivery Charges</span>
+                            <span class="price-val text-green">Free</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Total Amount</span>
+                            <span id="final-amount">₹0</span>
+                        </div>
+                        <div class="savings-text" id="savings-msg">You will save ₹0 on this order</div>
+                    </div>
+                </div>
+
+                <div class="security-badge">
+                    <i class="bi bi-shield-fill-check"></i>
+                    <span>Safe and Secure Payments. Easy returns. 100% Authentic products.</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="empty-cart-view" class="empty-cart hide">
+            <img src="/empty cart.png"
+                alt="Empty Cart">
+            <h3>Your cart is empty!</h3>
+            <p>Add items to it now.</p>
+            <a href="/" class="shop-now-btn">Shop Now</a>
+        </div>
+    </main>
+
+    <!-- Modal and Offcanvas elements would go here, omitting for brevity or can be copied from other files -->
+
+    <script type="module" src="/src/js/cart.js"></script>
+</body>
+
+</html>

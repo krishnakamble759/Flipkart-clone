@@ -1,0 +1,135 @@
+@import './variable.scss';
+
+.search-results-page {
+    background-color: $text-white;
+    min-height: calc(100vh - 56px);
+    padding-top: 20px;
+
+    .no-results-container {
+        background-color: $text-white;
+        padding: 50px 20px;
+        text-align: center;
+        margin: 20px auto;
+        max-width: 1200px;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            margin: 10px;
+            padding: 30px 15px;
+        }
+
+        .no-results-image {
+            width: 200px;
+            margin-bottom: 24px;
+
+            @include mobile {
+                width: 150px;
+            }
+        }
+
+        .no-results-text {
+            font-size: 18px;
+            font-weight: 500;
+            color: $text-dark;
+            margin-bottom: 8px;
+        }
+
+        .no-results-subtext {
+            font-size: 14px;
+            color: $text-light;
+            margin-bottom: 24px;
+        }
+
+        .search-query-text {
+            font-weight: 600;
+            color: $sky-blue;
+        }
+
+        .go-home-btn {
+            background-color: $sky-blue;
+            color: $text-white;
+            padding: 12px 40px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: $sky-blue;
+            }
+        }
+    }
+
+    // Special header styles for search results if needed
+    .search-results-header {
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 10%;
+            max-width: 100%;
+
+            @include mobile {
+                padding: 0 10px;
+            }
+
+            .logo-link {
+                img {
+                    width: 75px;
+                }
+            }
+
+            .search-container {
+                flex-grow: 1;
+                max-width: 600px;
+
+                .search-form input {
+                    width: 100%;
+                    border: none;
+                    padding: 8px 16px;
+                    border-radius: 2px;
+                    height: 36px;
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+// Inline styles for product-list logic
+#no-products-found {
+    grid-column: 1 / -1;
+    padding: 40px;
+    text-align: center;
+    background: $text-white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
+    width: 100%;
+
+    img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .no-results-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-dark;
+        margin-bottom: 8px;
+    }
+
+    .no-results-desc {
+        font-size: 14px;
+        color: $text-light;
+    }
+}

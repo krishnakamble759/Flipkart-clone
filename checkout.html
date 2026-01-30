@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart.com | Checkout</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Checkout Header -->
+    <header class="checkout-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="/">
+                    <img src="/header logo.png"
+                        alt="Flipkart" class="fk-logo" />
+                    <div class="explore-plus">
+                        <span class="explore-text">Explore <span class="plus-text">Plus</span></span>
+                        <img src="/plus.png"
+                            alt="Plus" class="plus-icon" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="checkout-wrapper">
+        <div class="checkout-container">
+            <!-- Left Side: Checkout Steps -->
+            <div class="steps-section">
+                <!-- Step 1: Login -->
+                <div class="checkout-step active" id="step-login">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <span class="step-title">LOGIN OR SIGNUP</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="login-row">
+                            <div class="login-left">
+                                <div class="floating-input">
+                                    <input type="text" id="checkout-email" placeholder="Enter Email/Mobile Number"
+                                        required autocomplete="off">
+                                    <div class="input-line"></div>
+                                </div>
+                                <p class="legal-text">By continuing, you agree to Flipkart's <a href="#">Terms of
+                                        Use</a> and <a href="#">Privacy Policy</a>.</p>
+                                <button class="continue-btn" id="login-continue">CONTINUE</button>
+
+                                <div class="guest-checkout-label">
+                                    <div class="radio-circle"></div>
+                                    <span>Guest Checkout</span>
+                                </div>
+                            </div>
+                            <div class="login-right">
+                                <span class="advantages-title">Advantages of our secure login</span>
+                                <ul class="advantages-list">
+                                    <li><i class="bi bi-truck"></i> Easily Track Orders, Hassle free Returns</li>
+                                    <li><i class="bi bi-bell"></i> Get Relevant Alerts and Recommendation</li>
+                                    <li><i class="bi bi-star"></i> Wishlist, Reviews, Ratings and more.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Delivery Address -->
+                <div class="checkout-step disabled" id="step-address">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <span class="step-title">DELIVERY ADDRESS</span>
+                    </div>
+                    <div class="step-content">
+                        <!-- Content will be shown when step is active -->
+                    </div>
+                </div>
+
+                <!-- Step 3: Order Summary -->
+                <div class="checkout-step disabled" id="step-summary">
+                    <div class="step-header">
+                        <span class="step-number">3</span>
+                        <span class="step-title">ORDER SUMMARY</span>
+                    </div>
+                    <div class="step-content">
+                    </div>
+                </div>
+
+                <!-- Step 4: Payment Options -->
+                <div class="checkout-step disabled" id="step-payment">
+                    <div class="step-header">
+                        <span class="step-number">4</span>
+                        <span class="step-title">PAYMENT OPTIONS</span>
+                    </div>
+                    <div class="step-content">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Security Message & Info -->
+            <div class="sidebar-section">
+                <div class="security-info">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Safe and Secure Payments. Easy returns. 100% Authentic products.</span>
+                </div>
+
+                <div class="price-summary-card hide">
+                    <!-- Price details will appear here after login -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="checkout-footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Policies</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="copyright">
+                © 2026 Krishna
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/checkout.js"></script>
+</body>
+
+</html>

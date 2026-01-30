@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipkart</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Mobile Sidebar Menu -->
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-drawer">
+    <div class="menu-header">
+      <div class="user-info">
+        <i class="bi bi-person-fill"></i>
+        <span>Login & Signup</span>
+      </div>
+      <img src="/logo_lite-8d7a06.png" class="menu-logo-icon" alt="Flipkart">
+    </div>
+    <ul class="menu-list">
+      <li><i class="bi bi-lightning-charge-fill"></i> SuperCoin Zone</li>
+      <li><i class="bi bi-star-fill"></i> Flipkart Plus Zone</li>
+      <li class="separator"></li>
+      <li><i class="bi bi-grid-fill"></i> All Categories</li>
+      <li><i class="bi bi-grid-3x3-gap-fill"></i> More on Flipkart</li>
+      <li class="separator"></li>
+      <li><i class="bi bi-translate"></i> Choose Language</li>
+      <li class="separator"></li>
+      <li><i class="bi bi-percent"></i> Offer Zone</li>
+      <li><i class="bi bi-briefcase-fill"></i> Sell on Flipkart</li>
+      <li class="separator"></li>
+      <li><i class="bi bi-box-seam-fill"></i> My Orders</li>
+      <li><i class="bi bi-ticket-perforated-fill"></i> Coupons</li>
+      <li><i class="bi bi-cart-fill"></i> My Cart</li>
+      <li><i class="bi bi-heart-fill"></i> My Wishlist</li>
+      <li><i class="bi bi-person-fill"></i> My Account</li>
+      <li><i class="bi bi-bell-fill"></i> My Notifications</li>
+      <li class="separator"></li>
+      <li>Notification Preferences</li>
+      <li>Help Centre</li>
+      <li>Legal</li>
+    </ul>
+  </div>
+
+  <!-- Top Header -->
+  <header class="header">
+    <!-- Mobile Header (Visible only on < 576px) -->
+    <div class="mobile-header">
+      <div class="mobile-top-row">
+        <div class="left-section">
+          <i class="bi bi-list hamburger-icon"></i>
+          <a href="/" class="mobile-logo">
+            <img src="/header logo.png" alt="Flipkart" class="fk-logo-mobile" />
+            <span class="explore-plus-mobile">Explore <span class="plus-text">Plus</span>
+              <img src="/plus.png" alt="Plus" class="plus-icon-mobile" /></span>
+          </a>
+        </div>
+
+        <!-- Tablet Search (Visible 769px - 1024px) -->
+        <div class="tablet-search-container">
+          <div class="search-box-tablet">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search for Products, Brands and More">
+          </div>
+        </div>
+
+        <div class="right-section">
+          <div class="mobile-icon-item"><i class="bi bi-phone"></i></div>
+          <div class="mobile-icon-item login">
+            <i class="bi bi-person-circle"></i> <span>Login</span>
+          </div>
+          <a href="cart.html" class="mobile-icon-item cart-link">
+            <i class="bi bi-cart"></i>
+            <span class="cart-badge hide">0</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-location-row">
+        <i class="bi bi-geo-alt-fill"></i>
+        <div class="location-text">
+          <span class="status">Location not set</span>
+          <span class="action">Select delivery location <i class="bi bi-chevron-right"></i></span>
+        </div>
+      </div>
+
+      <div class="mobile-search-row">
+        <div class="search-box-mobile">
+          <i class="bi bi-search"></i>
+          <input type="text" placeholder="Search for Products">
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Header -->
+    <div class="header-container">
+
+      <!-- Logo Section -->
+      <div class="logo-container">
+        <a href="/" class="logo-link">
+          <img src="/header logo.png" alt="Flipkart" class="fk-logo" />
+          <div class="explore-plus">
+            <span class="explore-text">Explore <span class="plus-text">Plus</span></span>
+            <img src="/plus.png" alt="Plus" class="plus-icon" />
+          </div>
+        </a>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <form class="search-form">
+          <input type="text" placeholder="Search for products, brands and more" name="q" autocomplete="off" />
+          <button type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Right Nap -->
+      <div class="nav-container">
+        <div class="nav-item">
+          <button class="login-btn">
+            <i class="bi bi-person tab-icon"></i>
+            <span>Login</span>
+            <i class="bi bi-chevron-down tab-icon"></i>
+          </button>
+        </div>
+        <div class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="bi bi-shop tab-icon"></i>
+            <span class="nav-text">Become a Seller</span>
+          </a>
+        </div>
+        <div class="nav-item dropdown">
+          <span class="nav-link">
+            <i class="bi bi-three-dots-vertical tab-icon"></i>
+            <span class="nav-text">More</span>
+            <i class="bi bi-chevron-down down-arrow nav-text"></i>
+          </span>
+          <div class="dropdown-content">
+            <a href="#">
+              <i class="bi bi-bell-fill"></i>
+              <span>Notification Preferences</span>
+            </a>
+            <a href="#">
+              <i class="bi bi-question-square-fill"></i>
+              <span>24x7 Customer Care</span>
+            </a>
+            <a href="#">
+              <i class="bi bi-graph-up-arrow"></i>
+              <span>Advertise</span>
+            </a>
+            <a href="#">
+              <i class="bi bi-download"></i>
+              <span>Download App</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="cart.html" class="nav-link cart-link">
+            <i class="bi bi-cart-fill cart-icon"></i>
+            <span class="nav-text">Cart</span>
+            <span class="cart-badge hide">0</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Categories Navigation -->
+  <div class="categories-nav">
+    <div class="categories-container">
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/grocery.svg" alt="Grocery">
+        </div>
+        <span class="category-label">Grocery</span>
+      </div>
+      <div class="category-item" data-link='/product-detail.html?type=iphone'>
+        <div class=" img-container">
+          <img src="/mobile.svg" alt="Mobiles">
+        </div>
+        <span class="category-label">Mobiles</span>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/fashion.svg" alt="Fashion">
+        </div>
+        <span class="category-label">Fashion</span>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/electronics.svg" alt="Electronics">
+        </div>
+        <span class="category-label">Electronics</span>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/home.svg" alt="Home">
+        </div>
+        <span class="category-label">Home</span>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/appliance.svg" alt="Appliances">
+        </div>
+        <span class="category-label">Appliances</span>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/travel.svg" alt="Travel">
+        </div>
+        <span class="category-label">Travel</span>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/top offers.svg" alt="Top Offers">
+        </div>
+        <span class="category-label">Top Offers</span>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/beauty.svg" alt="Beauty, Toys & More">
+        </div>
+        <span class="category-label">Beauty, Toys & More</span>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <img src="/wheeler.svg" alt="Two Wheelers">
+        </div>
+        <span class="category-label">Two Wheelers</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Banner Section -->
+  <div class="banner-section">
+    <div class="banner-container">
+      <button class="banner-btn prev-btn">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <div class="banner-wrapper">
+        <div class="banner-slide active">
+          <img src="/banner1.webp" alt="Banner 1">
+        </div>
+        <div class="banner-slide">
+          <img src="/banner2.webp" alt="Banner 2">
+        </div>
+        <div class="banner-slide">
+          <img src="/div._3ChZRr.svg" alt="Banner 3">
+        </div>
+      </div>
+      <button class="banner-btn next-btn">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Best of Electronics Section -->
+  <div class="electronics-section">
+    <div class="electronics-container">
+
+      <!-- Left Promotional Side -->
+      <div class="promo-sidebar">
+        <div class="promo-content">
+          <h2>Best of Electronics</h2>
+          <button class="view-all-btn">VIEW ALL</button>
+        </div>
+        <img src="/Electronics/7593e7b6640822c1.jpg" class="promo-bg" alt="Devices">
+      </div>
+
+      <!-- Right Product Slider -->
+      <div class="product-slider">
+        <div class="product-card" data-link='/product-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Electronics/powerbank.png" alt="PowerBanks">
+          </div>
+          <div class="product-info">
+            <div class="name">Premium PowerBanks</div>
+            <div class="offer">Shop Now!</div>
+            <div class="tag">Mi, Realme & more</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Electronics/camera.jpg" alt="Cameras">
+          </div>
+          <div class="product-info">
+            <div class="name">Top Mirrorless Cameras</div>
+            <div class="offer">Shop Now!</div>
+            <div class="tag">Canon, Sony, Fujifilm...</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-link='/printer-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Electronics/epson.png" alt="Printers">
+          </div>
+          <div class="product-info">
+            <div class="name">Epson Printers</div>
+            <div class="offer">From ₹10,999</div>
+            <div class="tag">Epson</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-link='/hp-printer-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Electronics/hp printer.png" alt="Printers">
+          </div>
+          <div class="product-info">
+            <div class="name">HP Printers</div>
+            <div class="offer">From ₹3,999</div>
+            <div class="tag">HP</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-link='/shaver-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Electronics/shaver.png" alt="Shavers">
+          </div>
+          <div class="product-info">
+            <div class="name">Best of Shavers</div>
+            <div class="offer">From ₹2,217</div>
+            <div class="tag">Philips & Havells</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Electronics/monitor.webp" alt="Monitors">
+          </div>
+          <div class="product-info">
+            <div class="name">Monitors</div>
+            <div class="offer">From ₹9999</div>
+            <div class="tag">Acer</div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrow -->
+        <button class="slider-next-btn"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Beauty, Food, Toys & More Section -->
+  <div class="beauty-section">
+    <div class="beauty-container">
+
+      <!-- Left Promotional Side -->
+      <div class="promo-sidebar">
+        <div class="promo-content">
+          <h2>Beauty, Food, Toys & more</h2>
+          <button class="view-all-btn">VIEW ALL</button>
+        </div>
+        <!-- Placeholder for Teddy Bear graphic using logic or existing image -->
+        <img src="/Toys/toy.jpeg" class="promo-bg" alt="BeautyToys" onerror="this.style.display='none'">
+      </div>
+
+      <!-- Right Product Slider -->
+      <div class="product-slider">
+        <div class="product-card">
+          <div class="img-wrapper">
+            <!-- Using cycle placeholder if available? No, using generic or electronics as filler as requested -->
+            <img src="/Toys/cycle.webp" alt="Geared Cycles">
+          </div>
+          <div class="product-info">
+            <div class="name">Geared Cycles</div>
+            <div class="offer">From ₹3999</div>
+            <div class="tag">Leader, Cradiac & more</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Toys/images.jpg" alt="Microphones">
+          </div>
+          <div class="product-info">
+            <div class="name">Microphones</div>
+            <div class="offer">Up to 70% off</div>
+            <div class="tag">Explore Now!</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Toys/flair.png" alt="Top Selling Stationery">
+          </div>
+          <div class="product-info">
+            <div class="name">Top Selling Stationery</div>
+            <div class="offer">From ₹49</div>
+            <div class="tag">Pens, Notebooks & more</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-link='/headphone-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Toys/headphone.png" alt="Headphones">
+          </div>
+          <div class="product-info">
+            <div class="name">Studio Headphones</div>
+            <div class="offer">Up to 80% off</div>
+            <div class="tag">Explore Now!</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Toys/download.jpg" alt="Rider Helmets">
+          </div>
+          <div class="product-info">
+            <div class="name">Rider Helmets</div>
+            <div class="offer">From ₹699</div>
+            <div class="tag">Vega, Steelbird, HRX and More</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Toys/ceat.jpg" alt="Tyres">
+          </div>
+          <div class="product-info">
+            <div class="name">Tyres</div>
+            <div class="offer">From ₹799</div>
+            <div class="tag">Apollo, Bridgestone, Ceat and</div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrow -->
+        <button class="slider-next-btn"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Monsoon Essentials Section -->
+  <div class="monsoon-section">
+    <div class="monsoon-container">
+
+      <!-- Left Promotional Side -->
+      <div class="promo-sidebar">
+        <div class="promo-content">
+          <h2>Monsoon Essentials</h2>
+          <button class="view-all-btn">VIEW ALL</button>
+        </div>
+        <!-- Placeholder background or specific graphic if available -->
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/278/278/image/b84f1c22e15a0dd9.jpg?q=90" class="promo-bg"
+          alt="Monsoon" onerror="this.style.display='none'">
+      </div>
+
+      <!-- Right Product Slider -->
+      <div class="product-slider">
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/fashion.png" alt="Men's Caps">
+          </div>
+          <div class="product-info">
+            <div class="name">Men's Caps</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag"> </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/torch.jpg" alt="Emergency Lights">
+          </div>
+          <div class="product-info">
+            <div class="name">Emergency Lights</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag">Easy to carry</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/carpet.jpg" alt="Carpet Rugs">
+          </div>
+          <div class="product-info">
+            <div class="name">Carpet Rugs</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag"> </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/namkeen.png" alt="Namkeen">
+          </div>
+          <div class="product-info">
+            <div class="name">Namkeen</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag"> </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/download.jpg" alt="Emergency Bulbs">
+          </div>
+          <div class="product-info">
+            <div class="name">Emergency Bulbs</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag">Long Battery Life</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/bed cover.jpg" alt="Bed Covers">
+          </div>
+          <div class="product-info">
+            <div class="name">Bed Covers</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag"> </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrow -->
+        <button class="slider-next-btn"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Best of Electronics Section -->
+  <div class="electronics-section">
+    <div class="electronics-container">
+
+      <!-- Left Promotional Side -->
+      <div class="promo-sidebar">
+        <div class="promo-content">
+          <h2>Best of Electronics</h2>
+          <button class="view-all-btn">VIEW ALL</button>
+        </div>
+        <img src="/Electronics/7593e7b6640822c1.jpg" class="promo-bg" alt="Devices">
+      </div>
+
+      <!-- Right Product Slider -->
+      <div class="product-slider">
+        <div class="product-card" data-link='/product-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Electronics/powerbank.png" alt="PowerBanks">
+          </div>
+          <div class="product-info">
+            <div class="name">Premium PowerBanks</div>
+            <div class="offer">Shop Now!</div>
+            <div class="tag">Mi, Realme & more</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Electronics/camera.jpg" alt="Cameras">
+          </div>
+          <div class="product-info">
+            <div class="name">Top Mirrorless Cameras</div>
+            <div class="offer">Shop Now!</div>
+            <div class="tag">Canon, Sony, Fujifilm...</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Electronics/epson.png" alt="Printers">
+          </div>
+          <div class="product-info">
+            <div class="name">Epson Printers</div>
+            <div class="offer">From ₹10,999</div>
+            <div class="tag">Epson</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-link='/hp-printer-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Electronics/hp printer.png" alt="Printers">
+          </div>
+          <div class="product-info">
+            <div class="name">HP Printers</div>
+            <div class="offer">From ₹3,999</div>
+            <div class="tag">HP</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-link='/shaver-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Electronics/shaver.png" alt="Shavers">
+          </div>
+          <div class="product-info">
+            <div class="name">Best of Shavers</div>
+            <div class="offer">From ₹2,217</div>
+            <div class="tag">Philips & Havells</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-link='/product-detail.html?type=shaver-s5885'>
+          <div class=" img-wrapper">
+            <img src="/shavers/5885 1.webp" alt="Philips Shaver S5885">
+          </div>
+          <div class="product-info">
+            <div class="name">PHILIPS S5885/28</div>
+            <div class="offer">₹7,824</div>
+            <div class="tag">13% off</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Electronics/monitor.webp" alt="Monitors">
+          </div>
+          <div class="product-info">
+            <div class="name">Monitors</div>
+            <div class="offer">From ₹9999</div>
+            <div class="tag">Acer</div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrow -->
+        <button class="slider-next-btn"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Beauty, Food, Toys & More Section -->
+  <div class="beauty-section">
+    <div class="beauty-container">
+
+      <!-- Left Promotional Side -->
+      <div class="promo-sidebar">
+        <div class="promo-content">
+          <h2>Beauty, Food, Toys & more</h2>
+          <button class="view-all-btn">VIEW ALL</button>
+        </div>
+        <!-- Placeholder for Teddy Bear graphic using logic or existing image -->
+        <img src="/Toys/toy.jpeg" class="promo-bg" alt="BeautyToys" onerror="this.style.display='none'">
+      </div>
+
+      <!-- Right Product Slider -->
+      <div class="product-slider">
+        <div class="product-card">
+          <div class="img-wrapper">
+            <!-- Using cycle placeholder if available? No, using generic or electronics as filler as requested -->
+            <img src="/Toys/cycle.webp" alt="Geared Cycles">
+          </div>
+          <div class="product-info">
+            <div class="name">Geared Cycles</div>
+            <div class="offer">From ₹3999</div>
+            <div class="tag">Leader, Cradiac & more</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Toys/images.jpg" alt="Microphones">
+          </div>
+          <div class="product-info">
+            <div class="name">Microphones</div>
+            <div class="offer">Up to 70% off</div>
+            <div class="tag">Explore Now!</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Toys/flair.png" alt="Top Selling Stationery">
+          </div>
+          <div class="product-info">
+            <div class="name">Top Selling Stationery</div>
+            <div class="offer">From ₹49</div>
+            <div class="tag">Pens, Notebooks & more</div>
+          </div>
+        </div>
+
+        <div class="product-card" data-link='/headphone-list.html'>
+          <div class=" img-wrapper">
+            <img src="/Toys/headphone.png" alt="Headphones">
+          </div>
+          <div class="product-info">
+            <div class="name">Studio Headphones</div>
+            <div class="offer">Up to 80% off</div>
+            <div class="tag">Explore Now!</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Toys/download.jpg" alt="Rider Helmets">
+          </div>
+          <div class="product-info">
+            <div class="name">Rider Helmets</div>
+            <div class="offer">From ₹699</div>
+            <div class="tag">Vega, Steelbird, HRX and More</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Toys/ceat.jpg" alt="Tyres">
+          </div>
+          <div class="product-info">
+            <div class="name">Tyres</div>
+            <div class="offer">From ₹799</div>
+            <div class="tag">Apollo, Bridgestone, Ceat and</div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrow -->
+        <button class="slider-next-btn"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Monsoon Essentials Section -->
+  <div class="monsoon-section">
+    <div class="monsoon-container">
+
+      <!-- Left Promotional Side -->
+      <div class="promo-sidebar">
+        <div class="promo-content">
+          <h2>Monsoon Essentials</h2>
+          <button class="view-all-btn">VIEW ALL</button>
+        </div>
+        <!-- Placeholder background or specific graphic if available -->
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/278/278/image/b84f1c22e15a0dd9.jpg?q=90" class="promo-bg"
+          alt="Monsoon" onerror="this.style.display='none'">
+      </div>
+
+      <!-- Right Product Slider -->
+      <div class="product-slider">
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/fashion.png" alt="Men's Caps">
+          </div>
+          <div class="product-info">
+            <div class="name">Men's Caps</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag"> </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/torch.jpg" alt="Emergency Lights">
+          </div>
+          <div class="product-info">
+            <div class="name">Emergency Lights</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag">Easy to carry</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/carpet.jpg" alt="Carpet Rugs">
+          </div>
+          <div class="product-info">
+            <div class="name">Carpet Rugs</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag"> </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/namkeen.png" alt="Namkeen">
+          </div>
+          <div class="product-info">
+            <div class="name">Namkeen</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag"> </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/download.jpg" alt="Emergency Bulbs">
+          </div>
+          <div class="product-info">
+            <div class="name">Emergency Bulbs</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag">Long Battery Life</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="img-wrapper">
+            <img src="/Monsoon/bed cover.jpg" alt="Bed Covers">
+          </div>
+          <div class="product-info">
+            <div class="name">Bed Covers</div>
+            <div class="offer">Min. 50% Off</div>
+            <div class="tag"> </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrow -->
+        <button class="slider-next-btn"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEO Text Section (Brand Directory) -->
+  <div class="seo-footer-section">
+    <div class="seo-container">
+      <div class="seo-group">
+        <h3 class="seo-heading">Top Stories: <span>Brand Directory</span></h3>
+        <p class="seo-text">
+          <span>MOST SEARCHED FOR ON FLIPKART:</span>
+          <a href="#">Fashion EOSS Sale</a> | <a href="#">Trend Stop</a> | <a href="#">Flipkart Axis Bank Super Elite
+            Credit card</a> | <a href="#">5G Mobile Phones</a> | <a href="#">Primebook Laptops</a> | <a href="#">Moto
+            Edge 40</a> | <a href="#">Bounce Infinity E1</a> | <a href="#">Buy Laptop on EMI</a> | <a href="#">Infinix
+            Zero Book Ultra</a> | <a href="#">OPPO Reno8 5G</a> | <a href="#">OPPO Reno8 Pro 5G</a> | <a href="#">Fresh
+            Flower Bouquet</a> | <a href="#">Electric Cycles</a> | <a href="#">Badminton</a> | <a href="#">Bouquet</a> |
+          <a href="#">Laptop Repair Services</a> | <a href="#">AC Cleaning Services</a> | <a href="#">Oneplus
+            Monitors</a> | <a href="#">Grievance Redressal</a> | <a href="#">Mobile Repair Services</a> | <a
+            href="#">Sell Old Mobile Phones</a> | <a href="#">Premium Laptops</a> | <a href="#">Electronics Store</a> |
+          <a href="#">Phone cover</a> | <a href="#">Infinix INBook Y1 Plus</a> | <a href="#">Okaya Electric Vehicles</a>
+          | <a href="#">bgauss electric scooter</a> | <a href="#">OPPO Reno7 Pro 5G</a> | <a href="#">iPhone 13</a> | <a
+            href="#">iPhone 13 Pro</a> | <a href="#">iPhone 13 Pro Max</a> | <a href="#">iPhone 13 Mini</a> | <a
+            href="#">Google Pixel 6a covers</a> | <a href="#">Flipkart Quick</a> | <a href="#">Ampere Magnus</a> | <a
+            href="#">Flipkart Help Centre</a> | <a href="#">Online Boat Store</a> | <a href="#">Covers from Rs 99</a> |
+          <a href="#">Flipkart Track Orders</a> | <a href="#">Flipkart Manage Orders</a> | <a href="#">Flipkart Return
+            Orders</a> | <a href="#">Flipkart Gift Cards Store</a> | <a href="#">Flipkart Axis Bank Credit Card</a> | <a
+            href="#">Flipkart Pay Later</a>
+        </p>
+
+        <p class="seo-text">
+          <span>MOBILES:</span>
+          <a href="/product-detail.html">iPhone 12 64GB</a> | <a href="/product-detail.html">iPhone 12 Pro 512GB</a> |
+          <a href="/product-detail.html">iPhone 12 128GB</a> | <a href="#">Vivo Y91i</a> | <a href="#">Vivo Y11</a> | <a
+            href="#">Vivo Y15</a> | <a href="#">Vivo Y50</a> | <a href="#">Vivo Y12</a> | <a href="#">Reno2 F</a> | <a
+            href="#">Oppo A12</a> | <a href="#">Oppo F15</a> | <a href="#">Oppo A31</a> | <a href="#">Samsung A71</a> |
+          <a href="#">Samsung A51</a> | <a href="#">Samsung
+            A31</a> | <a href="#">Realme X2</a> | <a href="#">iPhone 11</a> | <a href="#">iPhone 11 Pro</a> | <a
+            href="#">Mobile Cover</a> | <a href="#">Mobile Offers</a> | <a href="#">iphone x</a> | <a href="#">4G
+            Mobile</a> | <a href="#">Nokia Mobile</a> | <a href="#">Samsung Mobile</a> | <a href="#">iphone</a> | <a
+            href="#">Oppo Mobile</a> | <a href="#">Vivo Mobile</a>
+        </p>
+
+        <p class="seo-text">
+          <span>CAMERA:</span>
+          <a href="/product-detail.html">GoPro Action Camera</a> | <a href="/product-detail.html">Nikon Camera</a> | <a
+            href="/product-detail.html">Canon Camera</a> | <a href="#">Sony Camera</a> | <a href="#">Canon DSLR</a> | <a
+            href="#">Nikon DSLR</a>
+        </p>
+
+        <p class="seo-text">
+          <span>LAPTOPS:</span>
+          <a href="#">MacBook Pro M2</a> | <a href="#">Premium Laptop</a> | <a href="#">ASUS ROG Strix SCAR 16 (2023)
+            Core i9 13th Gen</a> | <a href="#">ASUS ROG Zephyrus M16 (2023) Core i9 13th Gen</a> | <a href="#">ASUS
+            Zenbook 14 OLED (2022)</a> | <a href="#">Realme Book Prime Core i5 11th Gen</a> | <a href="#">Microsoft
+            Surface Go Pentium 128GB</a> | <a href="#">Branded Laptops</a> | <a href="#">Apple Laptops</a> | <a
+            href="#">Acer Laptops</a> | <a href="#">Lenovo Laptops</a> | <a href="#">Dell Laptops</a> | <a href="#">Asus
+            Laptops</a> | <a href="#">HP Laptops</a> | <a href="#">Gaming Laptops</a> | <a href="#">2 in 1 Laptops</a> |
+          <a href="#">Laptops</a> | <a href="#">Dell latest laptops 2022</a> | <a href="#">HP latest laptops 2022</a> |
+          <a href="#">Infinix INBook Y1 Plus</a> | <a href="#">SAMSUNG Galaxy Book3</a> | <a href="#">12th Gen Intel
+            Core Laptops</a>
+        </p>
+
+        <p class="seo-text">
+          <span>TVS:</span>
+          <a href="#">Nokia TV</a> | <a href="#">Panasonic TV</a> | <a href="#">Thomson TV</a> | <a href="#">Mi X
+            Pro</a> | <a href="#">Realme TV</a> | <a href="#">Motorola TV</a> | <a href="#">OnePlus TVs</a> | <a
+            href="#">LG TV</a> | <a href="#">TV</a> | <a href="#">Sony TV</a> | <a href="#">Samsung TV</a> | <a
+            href="#">Android Television</a> | <a href="#">Iffalcon Tv</a> | <a href="#">Mi TV</a>
+        </p>
+
+        <p class="seo-text">
+          <span>LARGE APPLIANCES:</span>
+          <a href="#">TV & Appliances End of Season Sale</a> | <a href="#">Television</a> | <a href="#">Washing
+            Machines</a> | <a href="#">Refrigerators</a> | <a href="#">Air Conditioners</a> | <a href="#">Electric
+            Cookers</a> | <a href="#">Electric Jug(Heater) / Travel Kettles</a> | <a href="#">Induction Cooktops</a> |
+          <a href="#">Inverters / stabilizer</a> | <a href="#">Irons / Iron Box</a> | <a href="#">Mixer Grinder
+            Juicer</a> | <a href="#">Wet Grinders</a> | <a href="#">Chimneys</a> | <a href="#">Microwave Ovens</a> | <a
+            href="#">Vacuum Cleaners</a> | <a href="#">Water Purifier</a> | <a href="#">Fan</a> | <a href="#">MarQ
+            Customer Care</a>
+        </p>
+
+        <p class="seo-text">
+          <span>CLOTHING:</span>
+          <a href="#">Men Shirts</a> | <a href="#">Kurta Pajama</a> | <a href="#">Kurtas</a> | <a href="#">Men
+            T-Shirts</a> | <a href="#">Jeans</a> | <a href="#">Saree</a> | <a href="#">Dresses</a> | <a href="#">Kids
+            Dresses</a> | <a href="#">Designer Salwar Suits</a> | <a href="#">Bra</a> | <a href="#">Designer Kurtis</a>
+          | <a href="#">Track Pant</a> | <a href="#">Men Kurtas</a> | <a href="#">Gym Wear</a> | <a href="#">Party
+            Dresses</a> | <a href="#">Palazzo Suits</a> | <a href="#">Boys Clothing</a> | <a href="#">Gloves</a> | <a
+            href="#">Nighty</a> | <a href="#">Maxi Dresses</a> | <a href="#">Anarkali</a> | <a href="#">Gowns</a> | <a
+            href="#">Culottes</a> | <a href="#">Salwar Suits</a> | <a href="#">Kurtis</a> | <a href="#">Designer
+            Sarees</a> | <a href="#">Leggings</a> | <a href="#">Shorts</a> | <a href="#">Georgette Sarees</a> | <a
+            href="#">Ethnic wear</a> | <a href="#">Briefs & Trunks</a> | <a href="#">Nike Watches</a> | <a
+            href="#">Ascot Tie</a> | <a href="#">Corset Tops Tunics</a> | <a href="#">Leather PU Skirts</a> | <a
+            href="#">Corset tops camisoles</a> | <a href="#">Women magenta earrings</a> | <a href="#">No collar
+            jackets</a> | <a href="#">Green dress material</a> | <a href="#">Black patiala kurta set</a> | <a
+            href="#">Men camel shoes casual</a> | <a href="#">Black pathani</a> | <a href="#">Tassel Sarees</a> | <a
+            href="#">Khaki dresses</a> | <a href="#">Kids formal dresses</a> | <a href="#">Mauve shirts</a> | <a
+            href="#">Women henley</a> | <a href="#">uppada pattu sarees</a> | <a href="#">Leopard dresses</a> | <a
+            href="#">Sleeveless shrugs</a>
+        </p>
+
+        <p class="seo-text">
+          <span>FOOTWEAR:</span>
+          <a href="#">Shoes</a> | <a href="#">Adidas Shoes</a> | <a href="#">Reebok Shoes</a> | <a href="#">Nike
+            Shoes</a> | <a href="#">Puma Shoes</a> | <a href="#">Boots</a> | <a href="#">Bata Shoes</a> | <a
+            href="#">Woodland Shoes</a> | <a href="#">Skechers Shoes</a> | <a href="#">Sneakers</a> | <a href="#">Womens
+            Boots</a> | <a href="#">Sports Shoes</a> | <a href="#">Loafers</a> | <a href="#">Sandals</a> | <a
+            href="#">Lotto Sports Shoes</a> | <a href="#">Casual Shoes</a> | <a href="#">Womens Skechers Shoes</a> | <a
+            href="#">Asics Sports Shoes</a> | <a href="#">Formal Shoes</a> | <a href="#">School Shoes</a>
+        </p>
+
+        <p class="seo-text">
+          <span>GROCERIES:</span>
+          <a href="#">PhonePe Grocery Voucher</a> | <a href="#">Hand Wash</a> | <a href="#">Soap</a> | <a
+            href="#">Cashew Nuts</a> | <a href="#">Sunflower Oil</a> | <a href="#">Eggs</a> | <a href="#">Toilet
+            Cleaner</a> | <a href="#">Harpic Toilet Cleaner</a> | <a href="#">Dettol Soap</a> | <a href="#">Mustard
+            Oil</a> | <a href="#">Biscuits</a> | <a href="#">Cheese</a> | <a href="#">Patanjali Atta</a> | <a
+            href="#">Fortune Oil</a> | <a href="#">Aashirvaad Atta</a> | <a href="#">Tea</a>
+        </p>
+
+        <p class="seo-text">
+          <span>BEST SELLING ON FLIPKART:</span>
+          <a href="#">Fire-Boltt Ninja Calling Pro Bluetooth Calling Smartwatch 1.69 inch HD Display Smartwatch</a> | <a
+            href="#">Best Gas Geyser</a> | <a href="#">Kitchen Geyser</a> | <a href="#">Nutri Blenders</a> | <a
+            href="#">Portable Air Cooler</a> | <a href="#">Best Air Cooler</a> | <a href="#">Bags</a> | <a
+            href="#">Hitachi Refrigerator 3 Door</a> | <a href="#">Books</a> | <a href="#">Toys</a> | <a
+            href="#">Candles</a> | <a href="#">Helmets</a> | <a href="#">Wall Clocks</a> | <a href="#">Baby Food</a> |
+          <a href="#">Chocolates</a> | <a href="#">Cycles</a> | <a href="#">Calculators</a> | <a href="#">Lipsticks</a>
+          | <a href="#">Mask</a> | <a href="#">Vertiv UPS</a> | <a href="#">Fastrack Watches</a> | <a
+            href="#">Wallets</a> | <a href="#">Earrings</a> | <a href="#">Gold Coins</a> | <a href="#">Realme Pad
+            Mini</a> | <a href="#">Handbags</a> | <a href="#">conekt SW2 Smartwatch</a> | <a href="#">Mivi DuoPods
+            a350</a> | <a href="#">Speaker Cleaner</a>
+        </p>
+
+        <p class="seo-text">
+          <span>FURNITURE:</span>
+          <a href="#">Furniture</a> | <a href="#">Sofas</a> | <a href="#">Beds</a> | <a href="#">Dining sets</a> | <a
+            href="#">Wardrobes</a> | <a href="#">Mattresses</a> | <a href="#">TV Units</a> | <a href="#">Tables</a> | <a
+            href="#">Chairs</a> | <a href="#">Shelves</a> | <a href="#">Bean Bags</a> | <a href="#">Office Chairs</a> |
+          <a href="#">Computer Table</a> | <a href="#">Office Tables</a> | <a href="#">Red Sofa</a> | <a
+            href="#">Wakefit Beds</a> | <a href="#">White Sofa</a> | <a href="#">Wakefit Mattress</a> | <a
+            href="#">Green Sofa</a> | <a href="#">Black Sofa</a> | <a href="#">Brown Sofa</a>
+        </p>
+
+        <p class="seo-text">
+          <span>BGMH:</span>
+          <a href="#">Whey Protein</a> | <a href="#">Homeopathy</a> | <a href="#">Cricket</a> | <a href="#">Cycles</a> |
+          <a href="#">Footballs</a> | <a href="#">Treadmills</a> | <a href="#">Christmas Gifts</a> | <a href="#">Fitness
+            Accessories</a> | <a href="#">Online Guitar</a> | <a href="#">Books Store</a> | <a href="#">Musical
+            Instrument Store</a> | <a href="#">Dabur Chyawanprash</a> | <a href="#">Baidyanath Chyawanprash</a> | <a
+            href="#">Energy Drinks</a> | <a href="#">Toys</a> | <a href="#">Milk Drink Mixes</a> | <a href="#">Rakhi</a>
+          | <a href="#">Chyawanprash</a> | <a href="#">Indian Flag</a> | <a href="#">Protein Supplements</a>
+        </p>
+
+      </div>
+
+      <div class="seo-group">
+        <h3 class="seo-heading">Flipkart: The One-stop Shopping Destination</h3>
+        <p class="seo-paragraph">E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from
+          one store to another in search of the latest phone when you can find it on the Internet in a single click? Not
+          only mobiles. Flipkart houses everything you can possibly imagine, from trending electronics like laptops,
+          tablets, smartphones, and mobile accessories to in-vogue fashion staples like shoes, clothing and lifestyle
+          accessories; from modern furniture like sofa sets, dining tables, and wardrobes to appliances that make your
+          life easy like washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen and small
+          appliances; from home furnishings like cushion covers, mattresses and bedsheets to toys and musical
+          instruments, we got them all covered. You name it, and you can stay assured about finding them all here. For
+          those of you with erratic working hours, Flipkart is your best bet. Shop in your PJs, at night or in the wee
+          hours of the morning. This e-commerce never shuts down.</p>
+        <p class="seo-paragraph">What's more, with our year-round shopping festivals and events, our prices are
+          irresistible. We're sure you'll find yourself picking up more than what you had in mind. If you are wondering
+          why you should shop from Flipkart when there are multiple options available to you, well, the below will
+          answer your question.</p>
+        <p class="seo-paragraph"><span>Flipkart Plus</span></p>
+        <p class="seo-paragraph">A world of limitless possibilities awaits you - Flipkart Plus was kickstarted as a
+          loyalty reward programme for all its regular customers at zero subscription fee. All you need is 500
+          supercoins to be a part of this service. For every 100 rupees spent on Flipkart order, Plus members earns 4
+          supercoins & non-plus members earn 2 supercoins. Free Delivery, early access during Sales and shopping
+          festivals, exchange offers and priority customer service are the top benefits to a Flipkart Plus member. In
+          short, earn more when you shop more!</p>
+        <p class="seo-paragraph"><span>No Cost EMI</span></p>
+        <p class="seo-paragraph">In an attempt to make high-end products accessible to all, our No Cost EMI plan enables
+          you to shop with us under EMI, without shelling out any processing fee. Applicable on select mobiles, laptops,
+          large and small appliances, furniture, electronics and watches, you can now shop without burning a hole in
+          your pocket. If you've been eyeing a product for a long time, chances are it may be up for a no cost EMI. Take
+          a look ASAP! Terms and conditions apply.</p>
+        <p class="seo-paragraph"><span>EMI on Debit Cards</span></p>
+        <p class="seo-paragraph">Did you know debit card holders account for 79.38 crore in the country, while there are
+          only 3.14 crore credit card holders? After enabling EMI on Credit Cards, in another attempt to make online
+          shopping accessible to everyone, Flipkart introduces EMI on Debit Cards, empowering you to shop confidently
+          with us without having to worry about pauses in monthly cash flow. At present, we have partnered with Axis
+          Bank, HDFC Bank, State Bank of India and ICICI Bank for this facility. More power to all our shoppers! Terms
+          and conditions apply.</p>
+
+        <p class="seo-paragraph"><span>Mobile Exchange Offers</span></p>
+        <p class="seo-paragraph">Get an instant discount on the phone that you have been eyeing on. Exchange your old
+          mobile for a new one after the Flipkart experts calculate the value of your old phone, provided it is in a
+          working condition without damage to the screen. If a phone is applicable for an exchange offer, you will see
+          the 'Buy with Exchange' option on the product description of the phone. So, be smart, always opt for an
+          exchange wherever possible. Terms and conditions apply.</p>
+
+        <p class="seo-paragraph"><span>What Can You Buy From Flipkart?</span></p>
+        <p class="seo-paragraph"><span>Mobile Phones</span></p>
+        <p class="seo-paragraph">From budget phones to state-of-the-art smartphones, we have a mobile for everybody out
+          there. Whether you're looking for larger, fuller screens, power-packed batteries, blazing-fast processors,
+          beautification apps, high-tech selfie cameras or just large internal space, we take care of all the
+          essentials. Shop from top brands in the country like Samsung, Apple, Oppo, Xiaomi, Realme, Vivo, and Honor to
+          name a few. Rest assured, you're buying from only the most reliable names in the market. What's more, with
+          Flipkart's Complete Mobile Protection Plan, you will never again find the need to run around service centres.
+          This plan entails you to a number of post-purchase solutions, starting at as low as Rupees 99 only! Broken
+          screens, liquid damage to phone, hardware and software glitches, and replacements - the Flipkart Complete
+          Mobile Protection covers a comprehensive range of post-purchase problems, with door-to-door services.</p>
+
+        <p class="seo-paragraph"><span>Electronic Devices and Accessories</span></p>
+        <p class="seo-paragraph">When it comes to laptops, we are not far behind. Filter among dozens of super-fast
+          operating systems, hard disk capacity, RAM, lifestyle, screen size and many other criterias for personalized
+          results in a flash. All you students out there, confused about what laptop to get? Our Back To College Store
+          segregates laptops purpose wise (gaming, browsing and research, project work, entertainment, design,
+          multitasking) with recommendations from top brands and industry experts, facilitating a shopping experience
+          that is quicker and simpler.</p>
+        <p class="seo-paragraph">Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR
+          cameras, ever reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras for
+          adventure junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon,
+          GoPro, Sony, and Fujifilm are some big names you'll find in our store. Photography lovers, you couldn't land
+          at a better page than ours. Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras, millennial
+          favourite instant cameras or action cameras for adventure junkies: our range of cameras is as much for
+          beginners as it is for professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big names you'll find
+          in our store.</p>
+        <p class="seo-paragraph">Turn your home into a theatre with a stunning surround sound system. Choose from our
+          elaborate range of Sony home theatres, JBL soundbars and Philips tower speakers for an experience to remember.
+        </p>
+        <p class="seo-paragraph">How about jazzing up your phone with our quirky designer cases and covers? Our
+          wide-ranging mobile accessories starting from headphones, power banks, memory cards, mobile chargers, to
+          selfie sticks can prove to be ideal travel companions for you and your phone; never again worry about running
+          out of charge or memory on your next vacation.</p>
+
+        <p class="seo-paragraph"><span>Large Appliances</span></p>
+        <p class="seo-paragraph">Sleek TVs, power-saving refrigerators, rapid-cooling ACs, resourceful washing machines
+          - discover everything you need to run a house under one roof. Our Dependable TV and Appliance Store ensures
+          zero transit damage, with a replacement guarantee if anything goes wrong; delivery and installation as per
+          your convenience and a double warranty (Official Brand Warranty along with an extended Flipkart Warranty) -
+          rest assured, value for money is what is promised and delivered. Shop from market leaders in the country like
+          Samsung, LG, Whirlpool, Midea, Mi, Vu, Panasonic, Godrej, Sony, Daikin, and Hitachi among many others.</p>
+        <p class="seo-paragraph">For certain product categories, Customers meeting the eligibility criteria will have
+          the option to buy larger quantities. To know more on the eligibility criteria and terms and conditions, please
+          reach out to <a href="mailto:Purchases.oni@flipkart.com">Purchases.oni@flipkart.com</a>.</p>
+
+        <p class="seo-paragraph"><span>Small Home Appliances</span></p>
+        <p class="seo-paragraph">Find handy and practical home appliances designed to make your life simpler: electric
+          kettles, OTGs, microwave ovens, sandwich makers, hand blenders, coffee makers, and many more other time-saving
+          appliances that are truly crafted for a quicker lifestyle. Live life king size with these appliances at home.
+        </p>
+
+        <p class="seo-paragraph"><span>Lifestyle</span></p>
+        <p class="seo-paragraph">Flipkart, 'India ka Fashion Capital', is your one-stop fashion destination for anything
+          and everything you need to look good. Our exhaustive range of Western and Indian wear, summer and winter
+          clothing, formal and casual footwear, bridal and artificial jewellery, long-lasting make-up, grooming tools
+          and accessories are sure to sweep you off your feet. Shop from crowd favourites like Vero Moda, Forever 21,
+          Only, Arrow, Woodland, Nike, Puma, Revlon, Mac, and Sephora among dozens of other top-of-the-ladder names.
+          From summer staple maxi dresses, no-nonsense cigarette pants, traditional Bandhani kurtis to street-smart
+          biker jackets, you can rely on us for a wardrobe that is up to date. Explore our in-house brands like
+          Metronaut, Anmi, and Denizen, to name a few, for carefully curated designs that are the talk of the town. Get
+          ready to be spoiled for choice.Festivals, office get-togethers, weddings, brunches, or nightwear - Flipkart
+          will have your back each time.</p>
+
+        <p class="seo-paragraph"><span>Home and Furniture</span></p>
+        <p class="seo-paragraph">Moving to a new place is never easy, especially if you're buying new furniture. Beds,
+          sofa sets, dining tables, wardrobes, and TV units - it's not easy to set up everything again. With the
+          hundreds of options thrown at you, the ride could be overwhelming. What place is reliable, what furniture will
+          stand the test of time? These are questions you must ask before you choose a store. Well, our Durability
+          Certified Furniture Store has not only curated a range of furniture keeping in mind the modern Indian consumer
+          but furniture that comes with a lab certification, ensuring they last you for up to 10 years. Yes, all our
+          furniture has gone through 35 stability and load tests so that you receive only the best-quality furniture. Be
+          FurniSure, always. Names to look out for are Nilkamal, Godrej Interio, Urban Ladder, HomeTown, Durian and
+          Perfect Homes.</p>
+        <p class="seo-paragraph">You may have your furniture all set up, but they could end up looking flat and
+          incomplete without complementary decor. Curtains, cushion covers, bed sheets, wall shelves, paintings, floor
+          lamps - find everything that turns a house to an inviting home under one roof at Flipkart.</p>
+
+        <p class="seo-paragraph"><span>Baby and Kids</span></p>
+        <p class="seo-paragraph">Your kids deserve only the best. From bodysuits, booties, diapers to strollers, if
+          you're an expecting mother or a new mother, you will find everything you need to set sail on a smooth
+          parenting journey with the help of our baby care collection. When it comes to safety, hygiene and comfort, you
+          can rely on us without a second thought. Huggies, Pampers, MamyPoko, and Johnson & Johnson: we host only the
+          most-trusted names in the business for your baby.</p>
+
+        <p class="seo-paragraph"><span>Books, Sports and Games</span></p>
+        <p class="seo-paragraph">Work hard and no play? We don't believe in that. Get access to best-selling fiction and
+          non-fiction books by your favourite authors, thrilling English and Indian blockbusters, most-wanted gaming
+          consoles, and a tempting range of fitness and sports gadgets and equipment bound to inspire you to get moving.
+        </p>
+
+        <p class="seo-paragraph"><span>Grocery/Supermart</span></p>
+        <p class="seo-paragraph">Launching into the grocery vertical, Flipkart introduces <b>Supermart</b> that is out
+          to bring everyday essentials close to you. From pulses, spices, dairy, personal and sanitary care, breakfast
+          essentials, health drinks, spreads, ready to cook, grooming to cleaning agents, we are happy to present
+          everything you need to run a house. Now buy Grocery products for as low as 1 Rupee only - our <b>1 Rupee
+            Store</b> presents new products every day for a nominal price of 1 Rupee only. Terms and conditions apply.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="footer-wrapper">
+      <div class="footer-top">
+
+        <div class="footer-links-col">
+          <div class="col-section">
+            <h6 class="col-heading">ABOUT</h6>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Flipkart Stories</a>
+            <a href="#">Press</a>
+            <a href="#">Flipkart Wholesale</a>
+            <a href="#">Corporate Information</a>
+          </div>
+
+          <div class="col-section">
+            <h6 class="col-heading">GROUP COMPANIES</h6>
+            <a href="#">Myntra</a>
+            <a href="#">Cleartrip</a>
+            <a href="#">Shopsy</a>
+          </div>
+
+          <div class="col-section">
+            <h6 class="col-heading">HELP</h6>
+            <a href="#">Payments</a>
+            <a href="#">Shipping</a>
+            <a href="#">Cancellation & Returns</a>
+            <a href="#">FAQ</a>
+            <a href="#">Report Infringement</a>
+          </div>
+
+          <div class="col-section">
+            <h6 class="col-heading">CONSUMER POLICY</h6>
+            <a href="#">Return Policy</a>
+            <a href="#">Terms Of Use</a>
+            <a href="#">Security</a>
+            <a href="#">Privacy</a>
+            <a href="#">Sitemap</a>
+            <a href="#">Grievance Redressal</a>
+            <a href="#">EPR Compliance</a>
+          </div>
+
+          <div class="col-section social">
+            <h6 class="col-heading">Social:</h6>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider-vertical"></div>
+
+        <div class="footer-address-col">
+          <div class="col-section address">
+            <h6 class="col-heading">Mail Us:</h6>
+            <p>
+              Flipkart Internet Private Limited,<br>
+              Buildings Alyssa, Begonia &<br>
+              Clove Embassy Tech Village,<br>
+              Outer Ring Road, Devarabeesanahalli Village,<br>
+              Bengaluru, 560103,<br>
+              Karnataka, India
+            </p>
+          </div>
+
+          <div class="col-section address">
+            <h6 class="col-heading">Registered Office Address:</h6>
+            <p>
+              Flipkart Internet Private Limited,<br>
+              Buildings Alyssa, Begonia &<br>
+              Clove Embassy Tech Village,<br>
+              Outer Ring Road, Devarabeesanahalli Village,<br>
+              Bengaluru, 560103,<br>
+              Karnataka, India<br>
+              CIN : U51109KA2012PTC066107<br>
+              Telephone: <a href="tel:04445614700">044-45614700</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="bottom-links">
+          <a href="#">
+            <img src="/footer/seller.png" alt="Seller"> Become a Seller
+          </a>
+          <a href="#">
+            <img src="/footer/star.png" alt="Advertise"> Advertise
+          </a>
+          <a href="#">
+            <img src="/footer/gift.png" alt="Gift Cards"> Gift Cards
+          </a>
+          <a href="#">
+            <img src="/footer/help.png" alt="Help Center"> Help Center
+          </a>
+        </div>
+
+        <div class="copyright">
+          <span>&copy; 2026 Krishna</span>
+        </div>
+
+        <div class="payment-methods">
+          <!-- Using actual Flipkart payment image URL for accuracy -->
+          <img src="/payment-method.svg"
+            alt="Payment Methods">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Login Modal -->
+  <div class="login-modal-overlay">
+    <div class="login-modal-container">
+      <button class="modal-close-btn">&times;</button>
+      <div class="login-left">
+        <span class="left-title">Login</span>
+        <p class="left-desc">Get access to your Orders, Wishlist and Recommendations</p>
+        <div class="left-illustration">
+          <img src="/canvas.png" alt="Login Illustration" class="login-img">
+        </div>
+      </div>
+      <div class="login-right">
+        <form class="login-form">
+          <div class="form-floating-input">
+            <input type="text" id="loginId" required autocomplete="off">
+            <label for="loginId">Enter Email/Mobile Number</label>
+          </div>
+
+          <div class="legal-text-sm">
+            By continuing, you agree to Flipkart's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+          </div>
+
+          <div class="form-floating-input">
+            <input type="password" id="loginPassword" required>
+            <label for="loginPassword">Enter Password</label>
+            <a href="#" class="forgot-link">Forget?</a>
+          </div>
+
+          <button type="submit" class="login-submit-btn">Login</button>
+
+          <div class="or-divider">OR</div>
+
+          <button type="button" class="otp-btn">Request OTP</button>
+
+          <div class="new-account-link">
+            <a href="#">New to Flipkart? Create an account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Login Sheet (Separate from Desktop Modal) -->
+  <div class="mobile-login-sheet-overlay">
+    <div class="mobile-login-container">
+      <div class="sheet-header">
+        <i class="bi bi-x-lg close-sheet-btn"></i>
+        <div class="header-logo">
+          <span class="brand-text">Flipkart</span>
+          <img src="/plus.png" alt="Logo" class="header-logo-img">
+        </div>
+      </div>
+      <div class="sheet-body">
+        <h3 class="sheet-title">Log in to check your Account</h3>
+
+        <div class="mobile-input-container">
+          <div class="input-label">Phone Number</div>
+          <div class="input-row">
+            <span class="country-code">+91 <i class="bi bi-caret-down-fill"></i></span>
+            <input type="tel" class="phone-input">
+          </div>
+        </div>
+
+        <div class="use-email-link">Use Email-ID</div>
+
+        <div class="legal-text">
+          By continuing, you confirm that you are above 18 years of age, and you agree to the Flipkart's <a
+            href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="sheet-footer">
+        <button class="continue-btn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="app"></div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

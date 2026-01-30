@@ -1,0 +1,575 @@
+@import 'variable';
+
+.product-list-page {
+    background-color: $bg-body;
+    padding-top: 10px;
+    min-height: 100vh;
+
+    .breadcrumb {
+        font-size: 12px;
+        color: $text-gray;
+        padding: 10px 16px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        @include small-mobile {
+            padding: 8px 12px;
+            font-size: 11px;
+        }
+
+        @include too-small-mobile {
+            padding: 8px 10px;
+        }
+
+        span {
+            cursor: pointer;
+
+            &:hover {
+                color: $sky-blue;
+            }
+        }
+    }
+
+    .list-container {
+        background-color: $text-white;
+        margin: 0 16px 20px 16px;
+        padding: 16px;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+
+        @include mobile {
+            margin: 0;
+            padding: 10px;
+        }
+
+        @include too-small-mobile {
+            padding: 1px;
+        }
+
+        .results-count {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: $text-dark;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            @include small-mobile {
+                font-size: 10px;
+            }
+
+            .search-suggestion {
+                font-size: 12px;
+                color: $text-gray;
+                font-weight: 400;
+
+                a {
+                    color: $sky-blue;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .sort-options {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid $text-white;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+
+            @include mobile {
+                overflow-x: auto;
+                white-space: nowrap;
+                gap: 15px;
+                padding-bottom: 15px;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            .sort-label {
+                font-weight: 500;
+                color: $text-dark;
+            }
+
+            .sort-item {
+                color: $text-dark;
+                cursor: pointer;
+                padding-bottom: 5px;
+
+                &.active {
+                    color: $sky-blue;
+                    border-bottom: 2px solid $sky-blue;
+                    font-weight: 500;
+                }
+
+                &:hover {
+                    color: $sky-blue;
+                }
+            }
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            @include desktop {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include small-desktop {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include big-tab {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .product-list-card {
+                padding: 10px;
+
+                @include too-small-mobile {
+                    padding: 8px;
+                }
+
+                cursor: pointer;
+                transition: transform 0.2s;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                &:hover {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+                    .product-name {
+                        color: $sky-blue;
+                    }
+                }
+
+                .wishlist-icon {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    color: $text-white;
+                    font-size: 18px;
+                    z-index: 2;
+
+                    @include small-mobile {
+                        top: 10px;
+                        right: 10px;
+                    }
+
+                    @include mid-small-mobile {
+                        top: 8px;
+                        right: 20px;
+                    }
+
+                    @include too-small-mobile {
+                        top: 5px;
+                        right: 25px;
+                        font-size: 16px;
+                    }
+
+                    &.active {
+                        color: $color-red;
+                    }
+                }
+
+                .img-container {
+                    height: 250px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 15px;
+                    position: relative;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: contain;
+                    }
+
+                    .bestseller-tag {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: $text-white;
+                        color: $text-white;
+                        padding: 2px 8px;
+                        font-size: 12px;
+                        font-weight: 500;
+                        border-radius: 0 2px 2px 0;
+                    }
+
+                    .trending-tag {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: $text-white;
+                        color: $text-white;
+                        padding: 2px 8px;
+                        font-size: 12px;
+                        font-weight: 500;
+                        border-radius: 0 0 4px 0;
+                    }
+                }
+
+                .product-info {
+                    .sponsored-label {
+                        font-size: 12px;
+                        color: $text-gray;
+                        margin-bottom: 4px;
+                    }
+
+                    .variant-text {
+                        font-size: 14px;
+                        color: $text-gray;
+                        margin-bottom: 5px;
+                    }
+
+                    .product-name {
+                        font-size: 14px;
+                        color: $text-dark;
+                        margin-bottom: 5px;
+                        line-height: 18px;
+                        height: 36px;
+                        overflow: hidden;
+                    }
+
+                    .product-desc {
+                        font-size: 12px;
+                        color: $text-gray;
+                        margin-bottom: 8px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .rating-row {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 8px;
+
+                        .rating-badge {
+                            background-color: $green-offer;
+                            color: $text-white;
+                            padding: 2px 6px;
+                            border-radius: 3px;
+                            font-size: 12px;
+                            display: flex;
+                            align-items: center;
+                            gap: 2px;
+                        }
+
+                        .rating-count {
+                            font-size: 12px;
+                            color: $text-gray;
+                        }
+
+                        .assured-img {
+                            height: 18px;
+                        }
+                    }
+
+                    .price-row {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 5px;
+
+                        .curr-price {
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: $text-dark;
+                        }
+
+                        .old-price {
+                            font-size: 14px;
+                            color: $text-gray;
+                            text-decoration: line-through;
+                        }
+
+                        .discount {
+                            font-size: 13px;
+                            color: $green-offer;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .saver-deal {
+                        font-size: 12px;
+                        color: $sky-blue;
+                        font-weight: 500;
+
+                        &.purple {
+                            color: $deal-purple;
+                        }
+                    }
+
+                    .exchange-offer {
+                        font-size: 13px;
+                        color: $text-dark;
+                        margin-top: 4px;
+                    }
+
+                    .bank-offer {
+                        font-size: 12px;
+                        color: $green-offer;
+                        font-weight: 500;
+                    }
+
+                    .stock-limit {
+                        font-size: 12px;
+                        color: $color-red;
+                        font-weight: 500;
+                        margin-top: 4px;
+                    }
+                }
+
+                .compare-row {
+                    margin-top: auto;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 12px;
+                    color: $text-dark;
+                    padding-top: 10px;
+
+                    input {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        // Horizontal List View (For Cameras)
+        .products-row-view {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .product-row-card {
+                display: flex;
+                padding: 24px 0;
+                border-bottom: 1px solid $text-white;
+                cursor: pointer;
+                gap: 24px;
+
+                &:hover {
+                    .product-name {
+                        color: $sky-blue;
+                    }
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    gap: 15px;
+                    padding: 15px 0;
+                }
+
+                .img-col {
+                    width: 200px;
+                    height: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    position: relative;
+
+                    @include mobile {
+                        width: 100%;
+                        height: 180px;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: contain;
+                    }
+
+                    .wishlist-icon {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        color: $text-white;
+                        font-size: 18px;
+
+                        @include small-mobile {
+                            right: 15px;
+                            top: 5px;
+                        }
+
+                        @include mid-small-mobile {
+                            right: 25px;
+                            top: 5px;
+                        }
+
+                        @include too-small-mobile {
+                            right: 35px;
+                            top: 2px;
+                        }
+                    }
+
+                    .bestseller-tag {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: $text-white;
+                        color: $text-white;
+                        padding: 2px 8px;
+                        font-size: 12px;
+                        font-weight: 500;
+                        border-radius: 0 2px 2px 0;
+                    }
+                }
+
+                .info-col {
+                    flex-grow: 1;
+
+                    .product-name {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $text-dark;
+                        margin-bottom: 8px;
+
+                        @include mobile {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .rating-row {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 12px;
+
+                        .rating-badge {
+                            background-color: $green-offer;
+                            color: $text-white;
+                            padding: 2px 6px;
+                            border-radius: 3px;
+                            font-size: 12px;
+                            display: flex;
+                            align-items: center;
+                            gap: 2px;
+                        }
+
+                        .rating-count {
+                            font-size: 14px;
+                            color: $text-gray;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .highlights-list {
+                        list-style: disc;
+                        padding-left: 20px;
+                        color: $text-dark;
+                        font-size: 14px;
+
+                        li {
+                            margin-bottom: 4px;
+
+                            &::marker {
+                                color: $text-white;
+                            }
+                        }
+                    }
+                }
+
+                .price-col {
+                    width: 180px;
+                    flex-shrink: 0;
+
+                    @include mobile {
+                        width: 100%;
+                    }
+
+                    .price-row {
+                        margin-bottom: 4px;
+                        display: flex;
+                        flex-direction: column;
+
+                        @include mobile {
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+                        }
+
+                        .curr-price {
+                            font-size: 24px;
+                            font-weight: 700;
+                            color: $text-dark;
+                        }
+
+                        .old-price-row {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+
+                            .old-price {
+                                font-size: 14px;
+                                color: $text-gray;
+                                text-decoration: line-through;
+                            }
+
+                            .discount {
+                                font-size: 13px;
+                                color: $green-offer;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    .assured-img {
+                        height: 21px;
+                        display: block;
+                        margin-bottom: 8px;
+                    }
+
+                    .saver-deal {
+                        font-size: 12px;
+                        color: $sky-blue;
+                        font-weight: 500;
+                        margin-bottom: 4px;
+                    }
+
+                    .exchange-offer {
+                        font-size: 14px;
+                        color: $text-dark;
+                        margin-bottom: 4px;
+                    }
+
+                    .bank-offer {
+                        font-size: 12px;
+                        color: $green-offer;
+                        font-weight: 500;
+                    }
+
+                    .stock-limit {
+                        font-size: 12px;
+                        color: $color-red;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

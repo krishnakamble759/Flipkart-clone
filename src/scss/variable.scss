@@ -1,0 +1,113 @@
+// Color Variables
+$primary-color: #00A1E0;
+$secondary-color: #032D60;
+$navy-blue: #032E61;
+$dark-blue: #001639;
+$sky-blue: #0176d3;
+$text-dark: #181818;
+$text-light: #666666;
+$text-white: #FFFFFF;
+$text-gray: #454d5e;
+$border-color: #E0E0E0;
+$marketing-brown: #4a2b00;
+$logo-mask-blue: #2626f4;
+$fk-orange: #fb641b;
+$color-red: #c43202;
+$light-orange: #ff9f00;
+$green-offer: #388e3c;
+
+// General Layout Colors
+$bg-body: #f1f3f6;
+$bg-white: #ffffff;
+$bg-light-blue: #f0f5ff;
+$bg-pale-blue: #f5faff;
+$bg-hover: #f5f5f5;
+$deal-purple: #6c47ff;
+$fk-yellow: #ffe500;
+$fk-text-gray: #f0f0f0;
+
+// Breakpoints
+$too-small-mobile: 320px;
+$mid-small-mobile: 340px;
+$small-mobile: 375px;
+$mid-mobile: 500px;
+$mobile: 576px;
+$small-tab: 768px;
+$big-tab: 992px;
+$small-desktop: 1024px;
+$desktop: 1200px;
+$mid-desktop: 1440px;
+$large-desktop: 1500px;
+
+// Responsive Mixins
+@mixin too-small-mobile {
+    @media (max-width: $too-small-mobile) {
+        @content;
+    }
+}
+
+@mixin mid-small-mobile {
+    @media (max-width: $mid-small-mobile) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (max-width: $small-mobile) {
+        @content;
+    }
+}
+
+@mixin mid-mobile {
+    @media (max-width: $mid-mobile) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin small-tab {
+    @media (max-width: $small-tab) {
+        @content;
+    }
+}
+
+@mixin big-tab {
+    @media (max-width: $big-tab) {
+        @content;
+    }
+}
+
+@mixin small-desktop {
+    @media (max-width: $small-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin mid-desktop {
+    @media (max-width: $mid-desktop) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (max-width: $large-desktop) {
+        @content;
+    }
+}
+
+@mixin min-desktop {
+    @media (min-width: 1201px) {
+        @content;
+    }
+}
