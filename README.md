@@ -85,5 +85,5 @@ To deploy to GitHub Pages, you can use the static build in the `dist` folder. It
 3. Use a "Static HTML" or "Vite" template to automate the build and deploy process.
 
 ---
-Built with ❤️ by [Your Name]
+Built with ❤️ by [Krishna Kamble](https://github.com/krishnakamble759)
 
