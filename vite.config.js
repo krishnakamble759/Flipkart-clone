@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 
 
 export default defineConfig({
-    base: '/flipkart-website/',
+    base: '/Flipkart-clone/',
     build: {
         rollupOptions: {
             input: {
