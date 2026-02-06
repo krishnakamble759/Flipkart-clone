@@ -18,12 +18,10 @@
         <div class="header-container">
             <div class="logo-container">
                 <a href="./index.html">
-                    <img src="./header-logo.png"
-                        alt="Flipkart" class="fk-logo" />
+                    <img src="./header-logo.png" alt="Flipkart" class="fk-logo" />
                     <div class="explore-plus">
                         <span class="explore-text">Explore <span class="plus-text">Plus</span></span>
-                        <img src="./plus.png"
-                            alt="Plus" class="plus-icon" />
+                        <img src="./plus.png" alt="Plus" class="plus-icon" />
                     </div>
                 </a>
             </div>
@@ -130,6 +128,75 @@
     </footer>
 
     <script type="module" src="./src/js/checkout.js"></script>
+
+    <!-- Templates for Steps -->
+    <template id="header-completed-template">
+        <span class="step-number"><i class="bi bi-check-lg"></i></span>
+        <span class="step-title"><span class="title-text"></span> <span class="completed-val"></span></span>
+        <button class="change-btn">CHANGE</button>
+    </template>
+
+    <template id="address-form-template">
+        <div class="address-form">
+            <p class="sub-text">Please enter your delivery address to continue.</p>
+            <div class="checkout-form-container">
+                <div class="form-group"><input type="text" id="addr-name" placeholder="Full Name"
+                        class="checkout-input"></div>
+                <div class="form-group"><input type="text" id="addr-phone" placeholder="10-digit mobile number"
+                        class="checkout-input"></div>
+                <div class="form-group"><input type="text" id="addr-pincode" placeholder="Pincode"
+                        class="checkout-input"></div>
+                <div class="form-group"><input type="text" id="addr-details" placeholder="Address (Area and Street)"
+                        class="checkout-input"></div>
+                <button class="continue-btn" id="address-continue">DELIVER HERE</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="summary-content-template">
+        <div class="summary-content">
+            <p class="mb-15">Your order is ready to be placed.</p>
+            <div class="summary-box">
+                <!-- Items will be injected here -->
+            </div>
+            <button class="continue-btn" id="summary-continue">CONTINUE</button>
+        </div>
+    </template>
+
+    <template id="summary-item-template">
+        <div class="summary-item">
+            <div class="summary-item-details">
+                <strong class="item-title"></strong>
+                <div class="item-meta">
+                    Qty: <span class="item-qty"></span> | Price: <span class="item-price"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="summary-total-template">
+        <div class="summary-total">
+            Total Payable: <span class="total-val"></span>
+        </div>
+    </template>
+
+    <template id="payment-options-template">
+        <div class="payment-options">
+            <label class="payment-label">
+                <input type="radio" name="pay" checked> UPI (Google Pay, PhonePe, Bhim UPI)
+            </label>
+            <label class="payment-label">
+                <input type="radio" name="pay"> Wallets
+            </label>
+            <label class="payment-label">
+                <input type="radio" name="pay"> Credit / Debit / ATM Card
+            </label>
+            <label class="payment-label">
+                <input type="radio" name="pay" id="cod-radio"> Cash on Delivery
+            </label>
+            <button class="continue-btn mt-10" id="place-order-final">CONFIRM ORDER</button>
+        </div>
+    </template>
 </body>
 
 </html>

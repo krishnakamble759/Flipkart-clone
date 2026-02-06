@@ -53,6 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const globalCartBtns = document.querySelectorAll('#mobile-action-bar .cart-icon-btn, #mobile-action-bar .add-to-cart-mobile');
 
             globalCartBtns.forEach(btn => {
+                // Force visibility by removing any hiding classes
+                btn.classList.remove('hidden', 'hide');
+
                 const isIconBtn = btn.classList.contains('cart-icon-btn');
                 if (isInCart) {
                     if (isIconBtn) {
@@ -65,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (isIconBtn) {
                         btn.innerHTML = '<i class="bi bi-cart3"></i>';
                     } else {
-                        btn.innerHTML = 'Add to cart'; // Text as per HTML template for global bar
+                        btn.innerHTML = 'Add to cart';
                     }
                     btn.classList.remove('go-to-cart');
                 }
@@ -277,6 +280,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         updateBottomBar(price);
+        // Ensure updateCartButtons finds the correct active section AFTER it's shown
+        setTimeout(() => {
+            updateCartButtons();
+        }, 0);
     };
 
     if (productType === 'camera' && cameraSection) {
@@ -830,8 +837,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (layout) {
                 const title = layout.querySelector('.product-title')?.textContent.trim() || 'Product';
                 const price = layout.querySelector('.current-price, .price')?.textContent.trim() || '0';
-                const image = layout.querySelector('.main-img')?.src || '';
-                const id = layout.id; // Use section id as product id
+                // robust image selector: try .main-img, then .img-container img, then any large image
+                const imageElement = layout.querySelector('.main-img') ||
+                    layout.querySelector('.img-container img') ||
+                    layout.querySelector('.gallery-wrapper img') ||
+                    layout.querySelector('img');
+
+                const image = imageElement ? (imageElement.getAttribute('src') || imageElement.src) : '';
+                const id = layout.id;
 
                 addToCart({
                     id,

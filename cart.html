@@ -222,7 +222,8 @@
                             <span>Total Amount</span>
                             <span id="final-amount">₹0</span>
                         </div>
-                        <div class="savings-text" id="savings-msg">You will save ₹0 on this order</div>
+                        <div class="savings-text" id="savings-msg"><i class="bi bi-percent"></i> You will save <span
+                                id="savings-amount">₹0</span> on this order</div>
                     </div>
                 </div>
 
@@ -234,13 +235,62 @@
         </div>
 
         <div id="empty-cart-view" class="empty-cart hide">
-            <img src="./empty-cart.png"
-                alt="Empty Cart">
+            <img src="./empty-cart.png" alt="Empty Cart">
             <h3>Your cart is empty!</h3>
             <p>Add items to it now.</p>
             <a href="./index.html" class="shop-now-btn">Shop Now</a>
         </div>
     </main>
+
+    <!-- Templates -->
+    <template id="cart-item-template">
+        <div class="cart-item">
+            <div class="item-main">
+                <div class="item-img-col">
+                    <img alt="" class="item-img">
+                    <div class="qty-selector">
+                        <span class="qty-label">Qty:</span>
+                        <select class="qty-dropdown">
+                            <!-- Options will be injected -->
+                        </select>
+                    </div>
+                </div>
+                <div class="item-details-col">
+                    <div class="item-title"></div>
+                    <div class="item-subtitle">Grey</div>
+                    <div class="seller-info">Seller:Brandstackindia</div>
+                    <div class="price-row">
+                        <span class="discount-tag">↓5%</span>
+                        <span class="old-price"></span>
+                        <span class="curr-price"></span>
+                    </div>
+                    <div class="wow-tag">
+                        <img src="./wow.webp" alt="Wow">
+                        <span class="wow-buy-text"></span>
+                    </div>
+                    <div class="stock-info">Only few left</div>
+                    <div class="delivery-info"></div>
+                </div>
+            </div>
+            <div class="item-actions">
+                <div class="action-btn-wrapper">
+                    <button class="action-btn save-later">
+                        <i class="bi bi-journal-bookmark"></i> Save for later
+                    </button>
+                </div>
+                <div class="action-btn-wrapper">
+                    <button class="action-btn remove">
+                        <i class="bi bi-trash"></i> Remove
+                    </button>
+                </div>
+                <div class="action-btn-wrapper">
+                    <button class="action-btn buy-now">
+                        <i class="bi bi-lightning-fill"></i> Buy this now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </template>
 
     <!-- Modal and Offcanvas elements would go here, omitting for brevity or can be copied from other files -->
 

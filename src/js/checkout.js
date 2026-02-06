@@ -11,6 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const stepSummary = document.getElementById('step-summary');
     const stepPayment = document.getElementById('step-payment');
 
+    const headerTemplate = document.getElementById('header-completed-template');
+
+    const updateHeader = (stepEl, title, value) => {
+        const header = stepEl.querySelector('.step-header');
+        header.innerHTML = '';
+        const clone = headerTemplate.content.cloneNode(true);
+        clone.querySelector('.title-text').textContent = title;
+        if (value) clone.querySelector('.completed-val').textContent = value;
+        header.appendChild(clone);
+    };
+
+    const injectContent = (stepEl, templateId) => {
+        const content = stepEl.querySelector('.step-content');
+        content.innerHTML = '';
+        const template = document.getElementById(templateId);
+        content.appendChild(template.content.cloneNode(true));
+    };
+
     // Simple transition logic for demo
     loginContinueBtn.addEventListener('click', () => {
         if (!emailInput.value.trim()) {
@@ -21,31 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Deactivate Step 1, Activate Step 2
         stepLogin.classList.remove('active');
         stepLogin.classList.add('completed');
-
-        // Show truncated view for completed step
-        const loginHeader = stepLogin.querySelector('.step-header');
-        loginHeader.innerHTML = `
-            <span class="step-number"><i class="bi bi-check-lg"></i></span>
-            <span class="step-title">LOGIN <span class="completed-val">+91 ${emailInput.value}</span></span>
-            <button class="change-btn">CHANGE</button>
-        `;
+        updateHeader(stepLogin, 'LOGIN', `+91 ${emailInput.value}`);
 
         stepAddress.classList.remove('disabled');
         stepAddress.classList.add('active');
-
-        // Populate Address Content (Mock)
-        stepAddress.querySelector('.step-content').innerHTML = `
-            <div class="address-form">
-                <p class="sub-text">Please enter your delivery address to continue.</p>
-                <div class="checkout-form-container">
-                    <div class="form-group"><input type="text" id="addr-name" placeholder="Full Name" class="checkout-input"></div>
-                    <div class="form-group"><input type="text" id="addr-phone" placeholder="10-digit mobile number" class="checkout-input"></div>
-                    <div class="form-group"><input type="text" id="addr-pincode" placeholder="Pincode" class="checkout-input"></div>
-                    <div class="form-group"><input type="text" id="addr-details" placeholder="Address (Area and Street)" class="checkout-input"></div>
-                    <button class="continue-btn" id="address-continue">DELIVER HERE</button>
-                </div>
-            </div>
-        `;
+        injectContent(stepAddress, 'address-form-template');
     });
 
     // Event Delegation for dynamic buttons
@@ -61,64 +59,59 @@ document.addEventListener('DOMContentLoaded', () => {
             // Deactivate Step 2, Activate Step 3
             stepAddress.classList.remove('active');
             stepAddress.classList.add('completed');
-
-            const addrHeader = stepAddress.querySelector('.step-header');
-            addrHeader.innerHTML = `
-                <span class="step-number"><i class="bi bi-check-lg"></i></span>
-                <span class="step-title">DELIVERY ADDRESS <span class="completed-val">${nameField.value}</span></span>
-                <button class="change-btn">CHANGE</button>
-            `;
+            updateHeader(stepAddress, 'DELIVERY ADDRESS', nameField.value);
 
             stepSummary.classList.remove('disabled');
             stepSummary.classList.add('active');
+            stepSummary.classList.add('active');
+            injectContent(stepSummary, 'summary-content-template');
 
-            // Populate Summary Content (Mock)
-            stepSummary.querySelector('.step-content').innerHTML = `
-                <div class="summary-content">
-                    <p class="mb-15">Your order is ready to be placed.</p>
-                    <div class="summary-box">
-                        <strong>Product:</strong> Sony Headphones - WH-1000XM4<br>
-                        <strong>Quantity:</strong> 1<br>
-                        <strong>Price:</strong> ₹19,990
-                    </div>
-                    <button class="continue-btn" id="summary-continue">CONTINUE</button>
-                </div>
-            `;
+            // Populate dynamic summary
+            const summaryBox = stepSummary.querySelector('.summary-box');
+            if (summaryBox) {
+                const cart = JSON.parse(localStorage.getItem('flipkart_cart') || '[]');
+                summaryBox.innerHTML = ''; // Clear previous content
+
+                if (cart.length > 0) {
+                    const list = document.createElement('div');
+                    list.className = 'summary-list';
+                    let total = 0;
+
+                    const itemTemplate = document.getElementById('summary-item-template');
+
+                    cart.forEach(item => {
+                        const price = parseInt(item.price.replace(/[^0-9]/g, '')) || 0;
+                        total += price * item.quantity;
+
+                        const clone = itemTemplate.content.cloneNode(true);
+                        clone.querySelector('.item-title').textContent = item.title;
+                        clone.querySelector('.item-qty').textContent = item.quantity;
+                        clone.querySelector('.item-price').textContent = item.price;
+                        list.appendChild(clone);
+                    });
+
+                    summaryBox.appendChild(list);
+
+                    const totalTemplate = document.getElementById('summary-total-template');
+                    const totalClone = totalTemplate.content.cloneNode(true);
+                    totalClone.querySelector('.total-val').textContent = `₹${total.toLocaleString('en-IN')}`;
+                    summaryBox.appendChild(totalClone);
+
+                } else {
+                    summaryBox.textContent = 'Your cart is empty.';
+                }
+            }
         }
 
         // SUMMARY CONTINUE Click
         if (e.target && e.target.id === 'summary-continue') {
             stepSummary.classList.remove('active');
             stepSummary.classList.add('completed');
-
-            const summaryHeader = stepSummary.querySelector('.step-header');
-            summaryHeader.innerHTML = `
-                <span class="step-number"><i class="bi bi-check-lg"></i></span>
-                <span class="step-title">ORDER SUMMARY</span>
-                <button class="change-btn">CHANGE</button>
-            `;
+            updateHeader(stepSummary, 'ORDER SUMMARY');
 
             stepPayment.classList.remove('disabled');
             stepPayment.classList.add('active');
-
-            // Populate Payment Content (Mock)
-            stepPayment.querySelector('.step-content').innerHTML = `
-                <div class="payment-options">
-                    <label class="payment-label">
-                        <input type="radio" name="pay" checked> UPI (Google Pay, PhonePe, Bhim UPI)
-                    </label>
-                    <label class="payment-label">
-                        <input type="radio" name="pay"> Wallets
-                    </label>
-                    <label class="payment-label">
-                        <input type="radio" name="pay"> Credit / Debit / ATM Card
-                    </label>
-                    <label class="payment-label">
-                        <input type="radio" name="pay" id="cod-radio"> Cash on Delivery
-                    </label>
-                    <button class="continue-btn mt-10" id="place-order-final">CONFIRM ORDER</button>
-                </div>
-            `;
+            injectContent(stepPayment, 'payment-options-template');
         }
 
         // FINAL ORDER CONFIRM Click

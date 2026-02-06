@@ -48,7 +48,7 @@ body {
 .mobile-product-header {
     display: none;
     position: fixed;
-    top: 0; // Fix: Reset top to 0 to remove gap
+    top: 0;
     left: 0;
     width: 100%;
     height: 52px;
@@ -76,7 +76,7 @@ body {
         height: 38px;
         background: $text-white;
         border: 2px solid $sky-blue;
-        border-radius: 12px; // Rounded search bar
+        border-radius: 12px;
         display: flex;
         align-items: center;
         padding: 0 12px;
@@ -119,44 +119,48 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background: $text-white;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    padding: 8px;
-    gap: 8px;
+    padding: 10px 14px;
+    gap: 12px;
+    align-items: center;
 
-    @include mobile {
+    @include small-tab {
         display: flex;
     }
 
     .action-btn {
-        border: 1px solid $text-white;
+        height: 50px;
+        border-radius: 8px;
+        border: 1px solid $border-color;
         background: $text-white;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0;
-        outline: none;
-        border-radius: 4px;
-        height: 100%;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s ease;
     }
 
     .cart-icon-btn {
-        width: 48px;
+        width: 44px;
         flex-shrink: 0;
         font-size: 20px;
         color: $text-dark;
     }
 
     .emi-btn {
-        flex: 1;
+        flex: 1.5;
 
         .btn-content {
             display: flex;
             flex-direction: column;
             align-items: center;
+            line-height: 1.2;
 
             .main-text {
                 font-size: 13px;
@@ -171,45 +175,43 @@ body {
         }
     }
 
+    // Default hidden, shown ONLY in high-specificity low-price mode
     .add-to-cart-mobile {
-        display: none; // Hidden by default
+        display: none;
         flex: 1;
-        font-size: 14px;
-        font-weight: 500;
-        color: $text-dark;
+        border: 1px solid $border-color;
+        background: $text-white;
     }
 
     .buy-now-btn {
         flex: 1.2;
         background: $light-orange;
-        border-color: $light-orange;
+        border: none;
         color: $text-dark;
-        font-size: 15px;
         font-weight: 600;
 
         &.notify-me {
             background: $fk-orange;
-            border-color: $fk-orange;
             color: $text-white;
-            width: 100%;
-            flex: 1;
         }
     }
 
-    // Modifier for low price products (< 7000)
-    &.low-price {
+    // SPECIFICITY OVERRIDE FOR LOW PRICE (< 7000)
+    &.mobile-bottom-bar#mobile-action-bar.low-price {
 
         .cart-icon-btn,
         .emi-btn {
-            display: none;
+            display: none !important;
         }
 
         .add-to-cart-mobile {
-            display: flex;
+            display: flex !important;
         }
 
         .buy-now-btn {
+            display: flex !important;
             flex: 1;
+            background: #f8c200 !important; // PREMIUM Yellow
         }
     }
 }
@@ -328,7 +330,6 @@ body {
                         max-width: 100%;
                         max-height: 100%;
                         object-fit: contain;
-                        // Prevent image from growing too large on tablet/desktop flex adjustments
                         max-height: 100%;
                     }
 
@@ -386,7 +387,7 @@ body {
                     gap: 8px;
                     border-radius: 2px;
                     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
-                    min-width: 0; // Fix flexbox overflow issues
+                    min-width: 0;
                 }
 
                 .btn-cart {
@@ -758,7 +759,6 @@ body {
 
                 .badge-rating {
 
-                    // Default style captured in main badge-rating class
                     &.blue-rating {
                         background-color: $primary-color;
                     }
@@ -767,8 +767,6 @@ body {
                         background-color: $light-orange;
                     }
 
-                    // Ensure padding/margin matches what was inline if needed, 
-                    // otherwise rely on base class.
                     margin-left: 5px;
                 }
 
@@ -2848,7 +2846,6 @@ body {
 }
 
 /* boAt Rockerz 425 Specific Styles */
-// boAt Rockerz 425 & General Product Styles nested correctly
 .product-details-container {
     .product-layout {
         .right-col {
@@ -3178,7 +3175,6 @@ body {
     }
 }
 
-// User Requested Styles
 .product-details-container {
     .product-layout .right-col {
         .rating-reviews .assured-img {

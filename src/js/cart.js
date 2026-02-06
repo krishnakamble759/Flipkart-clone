@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let totalDiscount = 0;
         let finalAmount = 0;
 
+        const template = document.getElementById('cart-item-template');
         cart.forEach(item => {
             const priceNum = parseInt(item.price.replace(/[^0-9]/g, '')) || 0;
-            // Fake MRP calculation (roughly 20% higher)
             const mrpNum = Math.round(priceNum * 1.25 / 100) * 100;
             const discount = mrpNum - priceNum;
 
@@ -40,57 +40,70 @@ document.addEventListener('DOMContentLoaded', () => {
             totalDiscount += discount * item.quantity;
             finalAmount += priceNum * item.quantity;
 
-            const itemHtml = `
-                <div class="cart-item" data-id="${item.id}">
-                    <div class="item-main">
-                        <div class="item-img-col">
-                            <img src="${item.image}" alt="${item.title}">
-                            <div class="qty-selector">
-                                <span class="qty-label">Qty:</span>
-                                <select class="qty-dropdown">
-                                    ${[1, 2, 3, 4, 5].map(q => `<option value="${q}" ${item.quantity === q ? 'selected' : ''}>${q}</option>`).join('')}
-                                </select>
-                            </div>
-                        </div>
-                        <div class="item-details-col">
-                            <div class="item-title">${item.title}</div>
-                            <div class="item-subtitle">Grey</div>
-                            <div class="seller-info">Seller:Brandstackindia</div>
-                            <div class="price-row">
-                                <span class="discount-tag">↓5%</span>
-                                <span class="old-price">₹${(mrpNum * item.quantity).toLocaleString('en-IN')}</span>
-                                <span class="curr-price">₹${(priceNum * item.quantity).toLocaleString('en-IN')}</span>
-                            </div>
-                            <div class="wow-tag">
-                                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/wow_110903.png" alt="Wow">
-                                <span>Buy at ₹${(priceNum * 0.95).toLocaleString('en-IN', { maximumFractionDigits: 0 })}</span>
-                            </div>
-                            <div class="stock-info">Only few left</div>
-                            <div class="delivery-info">
-                                Delivery by ${getFormattedDeliveryDate(3)}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-actions">
-                        <div class="action-btn-wrapper">
-                            <button class="action-btn save-later">
-                                <i class="bi bi-journal-bookmark"></i> Save for later
-                            </button>
-                        </div>
-                        <div class="action-btn-wrapper">
-                            <button class="action-btn remove">
-                                <i class="bi bi-trash"></i> Remove
-                            </button>
-                        </div>
-                        <div class="action-btn-wrapper">
-                            <button class="action-btn buy-now">
-                                <i class="bi bi-lightning-fill"></i> Buy this now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-            itemsContainer.insertAdjacentHTML('beforeend', itemHtml);
+            const clone = template.content.cloneNode(true);
+            const itemEl = clone.querySelector('.cart-item');
+            itemEl.dataset.id = item.id;
+
+            const itemImg = clone.querySelector('.item-img');
+            let imagePath = item.image || './empty-cart.png';
+
+            // Repair old absolute paths if they exist in localStorage
+            if (imagePath.includes('localhost') || imagePath.includes('127.0.0.1')) {
+                try {
+                    const url = new URL(imagePath);
+                    // extracting filename relative to root, removing leading /
+                    imagePath = url.pathname.startsWith('/') ? url.pathname.substring(1) : url.pathname;
+                } catch (e) {
+                    console.error('Invalid URL in cart item:', imagePath);
+                }
+            } else if (imagePath.startsWith('/') && !imagePath.startsWith('./')) {
+                // Ensure root-relative paths become relative for file:// protocol
+                imagePath = imagePath.substring(1);
+            }
+
+            itemImg.src = imagePath;
+            itemImg.alt = item.title;
+
+            // Fallback: Smart Retry
+            itemImg.onerror = () => {
+                // If we haven't tried public/ yet, try it (fixes file:// opening of vite projects)
+                if (!itemImg.dataset.retried) {
+                    itemImg.dataset.retried = 'true';
+                    // Strip ./ if present to cleaner append
+                    const cleanPath = imagePath.replace(/^\.\//, '');
+                    itemImg.src = 'public/' + cleanPath;
+                } else {
+                    // If public/ also failed, show placeholder
+                    itemImg.src = './empty-cart.png';
+                    itemImg.onerror = null;
+                }
+            };
+
+            // Ensure local wow icon is used
+            const wowImg = clone.querySelector('.wow-tag img');
+            if (wowImg) {
+                wowImg.src = './wow.webp';
+                wowImg.onerror = () => {
+                    wowImg.style.display = 'none';
+                };
+            }
+
+            clone.querySelector('.item-title').textContent = item.title;
+            clone.querySelector('.old-price').textContent = `₹${(mrpNum * item.quantity).toLocaleString('en-IN')}`;
+            clone.querySelector('.curr-price').textContent = `₹${(priceNum * item.quantity).toLocaleString('en-IN')}`;
+            clone.querySelector('.wow-buy-text').textContent = `Buy at ₹${(priceNum * 0.95).toLocaleString('en-IN', { maximumFractionDigits: 0 })}`;
+            clone.querySelector('.delivery-info').textContent = `Delivery by ${getFormattedDeliveryDate(3)}`;
+
+            const qtySelect = clone.querySelector('.qty-dropdown');
+            [1, 2, 3, 4, 5].forEach(q => {
+                const opt = document.createElement('option');
+                opt.value = q;
+                opt.textContent = q;
+                if (item.quantity === q) opt.selected = true;
+                qtySelect.appendChild(opt);
+            });
+
+            itemsContainer.appendChild(clone);
         });
 
         // Update Price Summary
@@ -105,7 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const footerOldPriceElem = document.querySelector('.footer-old-price');
         if (footerOldPriceElem) footerOldPriceElem.textContent = `₹${totalMrp.toLocaleString('en-IN')}`;
 
-        document.getElementById('savings-msg').innerHTML = `<i class="bi bi-percent"></i> You'll save ₹${totalDiscount.toLocaleString('en-IN')} on this order!`;
+        const savingsAmount = document.getElementById('savings-amount');
+        if (savingsAmount) savingsAmount.textContent = `₹${totalDiscount.toLocaleString('en-IN')}`;
 
         // Add Event Listeners
         addEventListeners();
